@@ -15,7 +15,7 @@ export default function Hero() {
         playsInline
         className="absolute w-full h-full object-cover scale-105"
       >
-        <source src="/video_header.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}video_header.mp4`} type="video/mp4" />
       </video>
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
