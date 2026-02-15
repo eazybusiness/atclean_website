@@ -3,44 +3,55 @@ const services = [
     title: 'Grundreinigung',
     description: 'Gründliche Tiefenreinigung für Ihre Räumlichkeiten. Perfekt für den Start oder nach Renovierungen.',
     icon: '🧹',
+    color: 'from-blue-500 to-blue-600',
   },
   {
     title: 'Unterhaltsreinigung',
     description: 'Regelmäßige professionelle Reinigung für dauerhaft saubere und gepflegte Räume.',
     icon: '✨',
+    color: 'from-purple-500 to-purple-600',
   },
   {
     title: 'Bauendreinigung',
     description: 'Professionelle Reinigung nach Bau- oder Renovierungsarbeiten für bezugsfertige Objekte.',
     icon: '🏗️',
+    color: 'from-orange-500 to-orange-600',
   },
   {
     title: 'Hauswirtschaft',
     description: 'Umfassende hauswirtschaftliche Dienstleistungen für Ihr Wohlbefinden.',
     icon: '🏠',
+    color: 'from-green-500 to-green-600',
   },
   {
     title: 'Fensterreinigung',
     description: 'Streifenfreie Fensterreinigung für klare Durchsicht und mehr Licht.',
     icon: '🪟',
+    color: 'from-cyan-500 to-cyan-600',
   },
   {
     title: 'Winterdienst',
     description: 'Zuverlässiger Winterdienst für sichere Wege und Zufahrten.',
     icon: '❄️',
+    color: 'from-indigo-500 to-indigo-600',
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+              Unsere Dienstleistungen
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Dienstleistungen im Überblick
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Professionelle Reinigungslösungen für jeden Bedarf
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Professionelle Reinigungslösungen für jeden Bedarf – maßgeschneidert, zuverlässig und mit höchsten Qualitätsstandards
           </p>
         </div>
 
@@ -48,17 +59,45 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition transform hover:-translate-y-1"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
             >
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
+              <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
+              <div className="p-8">
+                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <button className="text-primary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Mehr erfahren
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-primary to-blue-700 text-white rounded-2xl p-8 md:p-12 shadow-xl">
+            <h3 className="text-3xl font-bold mb-4">
+              Individuelle Lösungen für Ihr Unternehmen
+            </h3>
+            <p className="text-lg mb-6 text-blue-100 max-w-2xl mx-auto">
+              Benötigen Sie eine maßgeschneiderte Reinigungslösung? Wir erstellen gemeinsam mit Ihnen einen individuellen Reinigungsplan.
+            </p>
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-lg"
+            >
+              Jetzt beraten lassen
+            </button>
+          </div>
         </div>
       </div>
     </section>
