@@ -3,8 +3,6 @@
 ## Active Tasks
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
 - [ ] Configure custom domain (atclean.de) - requires IONOS access
-add a home menu item. when I am on the faq or service sites i need to have a way to go back.
-the logo in the header has the wrong link, it should go to the home page.
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
 - [ ] Upload PHP files to IONOS server and test live contact form
 
@@ -74,6 +72,10 @@ the logo in the header has the wrong link, it should go to the home page.
 ✓ Copy working PHP code from gold_pfandleiher_web project (2026-02-15)
 ✓ Create public/api/contact.php with info@atclean.de recipient (2026-02-15)
 ✓ Update Contact.jsx to use PHP endpoint instead of mailto (2026-02-15)
+✓ Add Home menu item to navigation (2026-02-15)
+✓ Fix logo link to navigate to home page using React Router Link (2026-02-15)
+✓ Fix FAQ page routing - replaced anchor tags with Link components (2026-02-15)
+✓ Add automatic scroll-to-top when navigating between pages (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
