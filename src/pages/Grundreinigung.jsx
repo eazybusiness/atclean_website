@@ -52,12 +52,14 @@ export default function Grundreinigung() {
               </p>
             </div>
 
-            {/* Für wen */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Grundreinigung für Privat & Gewerbe
               </h3>
               <p className="text-gray-700 mb-6">
+                Ob Wohnung, Einfamilienhaus, Bürogebäude oder Ladenlokal – wir passen die Grundreinigung individuell 
+                an Ihre Anforderungen an. Zudem sind regelmäßige oder einmalige Einsätze möglich. So erhalten Sie 
+                dauerhaft saubere Räume.
                 Ob Wohnung, Einfamilienhaus, Bürogebäude oder Ladenlokal – wir passen die Grundreinigung 
                 individuell an Ihre Anforderungen an. Zudem sind regelmäßige oder einmalige Einsätze möglich. 
                 So erhalten Sie dauerhaft saubere Räume.

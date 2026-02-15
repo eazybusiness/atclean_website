@@ -6,6 +6,7 @@ export default function Contact() {
     email: '',
     phone: '',
     message: '',
+    privacyAccepted: false,
   });
 
   const handleSubmit = (e) => {
@@ -95,9 +96,25 @@ export default function Contact() {
                 ></textarea>
               </div>
 
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacyAccepted"
+                  required
+                  checked={formData.privacyAccepted}
+                  onChange={(e) => setFormData({ ...formData, privacyAccepted: e.target.checked })}
+                  className="mt-1 mr-3 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                />
+                <label htmlFor="privacy" className="text-sm text-gray-700">
+                  Ich habe die <a href="/datenschutz" target="_blank" className="text-primary hover:underline font-semibold">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen dauerhaft gespeichert werden. *
+                </label>
+              </div>
+
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-105"
+                disabled={!formData.privacyAccepted}
+                className="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none"
               >
                 Nachricht senden
               </button>
@@ -153,8 +170,11 @@ export default function Contact() {
 
             <div className="bg-gradient-to-br from-primary to-blue-700 text-white rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Sprechzeiten</h3>
+              <p className="text-lg mb-2">
+                <strong>08:00 - 17:00 Uhr</strong>
+              </p>
               <p className="text-lg mb-4">
-                Wir sind für Sie da und freuen uns auf Ihre Anfrage!
+                Montag - Freitag
               </p>
               <p className="text-sm opacity-90">
                 Kontaktieren Sie uns telefonisch oder per E-Mail. Wir melden uns schnellstmöglich bei Ihnen zurück.

@@ -50,6 +50,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>📍 Südheide und Umgebung</li>
+              <li className="mt-4 pt-4 border-t border-gray-800">
+                <span className="font-semibold text-white">Sprechzeiten:</span><br />
+                08:00 - 17:00 Uhr<br />
+                Montag - Freitag
+              </li>
             </ul>
           </div>
         </div>

@@ -25,7 +25,7 @@ const stats = [
   { number: '10+', label: 'Jahre Erfahrung' },
   { number: '200+', label: 'Zufriedene Kunden' },
   { number: '50+', label: 'Mitarbeiter' },
-  { number: '24/7', label: 'Erreichbarkeit' },
+  { number: '08-17', label: 'Mo-Fr Uhr' },
 ];
 
 export default function About() {

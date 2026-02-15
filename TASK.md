@@ -2,11 +2,11 @@
 
 ## Active Tasks
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
-- [ ] **Add real operating hours** (requires customer answer - do not act now)
 - [ ] Test responsiveness on mobile/tablet/desktop
 - [ ] Integrate PHP contact form on IONOS
 - [ ] Configure custom domain (atclean.de)
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
+
 
 ## Completed Tasks
 ✓ Project planning and structure definition (2025-02-15)
@@ -56,6 +56,17 @@
 ✓ Move FAQ from services to header menu (2026-02-15)
 ✓ Build and deploy all changes (2026-02-15)
 ✓ Update PLANNING.md (2026-02-15)
+✓ Add real operating hours (08:00-17:00, Mon-Fri) to Footer and Contact (2026-02-15)
+✓ Remove 24/7 claim from About section stats (2026-02-15)
+✓ Scrape real content from atclean.de for all 6 service pages (2026-02-15)
+✓ Update Hauswirtschaft page with real content (2026-02-15)
+✓ Update Fensterreinigung page with real content (2026-02-15)
+✓ Update Winterdienst page with real content (2026-02-15)
+✓ Update Grundreinigung page with real content (2026-02-15)
+✓ Update Unterhaltsreinigung page with real content (2026-02-15)
+✓ Update Bauendreinigung page with real content (2026-02-15)
+✓ Add GDPR-compliant checkbox to contact form (Datenschutzerklärung confirmation) (2026-02-15)
+✓ Delete .planning/ directory with incorrect Meta Ads project content (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

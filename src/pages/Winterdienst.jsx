@@ -5,8 +5,8 @@ export default function Winterdienst() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Winterdienst</h1>
           <p className="text-xl md:text-2xl max-w-3xl">
-            Zuverlässiger Winterdienst in Südheide, Celle und Hannover. Schneeräumung und Streudienst 
-            für sichere Wege – rund um die Uhr.
+            Professioneller Winterdienst in Celle, Südheide & Hannover. A-Team steht für zuverlässige 
+            Schneeräumung und Streudienst zu fairen Preisen.
           </p>
         </div>
       </section>
@@ -20,7 +20,7 @@ export default function Winterdienst() {
                 Unsere Leistungen im Winterdienst
               </h3>
               <p className="text-gray-700 mb-4">
-                Wir sorgen für sichere und begehbare Wege in der kalten Jahreszeit:
+                Wir sorgen für Sicherheit und Ordnung auf Ihren Außenflächen:
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
@@ -29,27 +29,23 @@ export default function Winterdienst() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">✓</span>
-                  Streudienst mit umweltfreundlichen Streumitteln
+                  Streudienst bei Glätte (nach örtlichen Vorschriften)
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">✓</span>
-                  Parkplatzräumung für Gewerbeobjekte
+                  Räumung von Parkplätzen und Hofflächen
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">✓</span>
-                  Dachenteisungen und Eiszapfenentfernung
+                  Winterdienst für Wohnanlagen, Gewerbe & öffentliche Einrichtungen
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">✓</span>
-                  24/7 Bereitschaftsdienst bei Bedarf
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-2">✓</span>
-                  Dokumentation für Verkehrssicherungspflicht
+                  Einsatz nach Wetterlage, früh morgens oder bei Bedarf
                 </li>
               </ul>
               <p className="text-primary font-semibold mt-4">
-                Ihrer Verkehrssicherungspflicht nachkommen – wir übernehmen das für Sie
+                👉 Auf Wunsch inklusive Dokumentation und Bereitschaftsdienst
               </p>
             </div>
 
