@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     company: 'Sparkasse Celle',
-    logo: '🏦',
+    logo: '/assets/logos/sparkasse-celle.png',
+    logoFallback: '🏦',
     text: 'Wir arbeiten seit 5 Jahren mit A-Team Clean und können den Service wärmstens weiterempfehlen. Zuverlässig, professionell und immer pünktlich.',
     author: 'Michael Schmidt',
     position: 'Facility Manager',
@@ -11,7 +12,8 @@ const testimonials = [
   },
   {
     company: 'Autohaus Müller GmbH',
-    logo: '🚗',
+    logo: '/assets/logos/autohaus-mueller.png',
+    logoFallback: '🚗',
     text: 'Die Qualität der Reinigungsarbeiten ist hervorragend. Unsere Ausstellungsräume glänzen jeden Morgen. Absolut empfehlenswert!',
     author: 'Andrea Müller',
     position: 'Geschäftsführerin',
@@ -19,7 +21,8 @@ const testimonials = [
   },
   {
     company: 'Klinikum Celle',
-    logo: '🏥',
+    logo: '/assets/logos/klinikum-celle.png',
+    logoFallback: '🏥',
     text: 'In einem Krankenhaus sind Hygiene und Sauberkeit oberste Priorität. A-Team Clean erfüllt alle unsere hohen Anforderungen zuverlässig.',
     author: 'Dr. Thomas Weber',
     position: 'Verwaltungsdirektor',
@@ -27,7 +30,8 @@ const testimonials = [
   },
   {
     company: 'Grundschule Südheide',
-    logo: '🏫',
+    logo: '/assets/logos/grundschule-suedheide.png',
+    logoFallback: '🏫',
     text: 'Seit 3 Jahren kümmert sich A-Team Clean um unsere Schule. Die Zusammenarbeit ist unkompliziert und das Ergebnis überzeugt uns täglich.',
     author: 'Petra Hoffmann',
     position: 'Schulleiterin',
@@ -35,7 +39,8 @@ const testimonials = [
   },
   {
     company: 'TechPark Hannover',
-    logo: '🏢',
+    logo: '/assets/logos/techpark-hannover.png',
+    logoFallback: '🏢',
     text: 'Professionelle Büroreinigung auf höchstem Niveau. Flexible Zeiten, faire Preise und exzellente Qualität. Wir sind sehr zufrieden!',
     author: 'Lars Schneider',
     position: 'Office Manager',
@@ -43,7 +48,8 @@ const testimonials = [
   },
   {
     company: 'Hotel Celler Hof',
-    logo: '🏨',
+    logo: '/assets/logos/hotel-celler-hof.png',
+    logoFallback: '🏨',
     text: 'In der Hotellerie zählt jedes Detail. A-Team Clean versteht unsere Ansprüche und liefert konstant erstklassige Arbeit.',
     author: 'Julia Becker',
     position: 'Hoteldirektorin',
@@ -97,8 +103,19 @@ export default function Testimonials() {
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-primary"></div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="text-7xl mb-6 animate-bounce-slow">
-                {testimonials[currentIndex].logo}
+              <div className="mb-6 h-24 flex items-center justify-center">
+                <img
+                  src={`${import.meta.env.BASE_URL}${testimonials[currentIndex].logo.replace(/^\//, '')}`}
+                  alt={`${testimonials[currentIndex].company} Logo`}
+                  className="max-h-20 max-w-xs object-contain"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'block';
+                  }}
+                />
+                <div className="hidden text-7xl animate-bounce-slow">
+                  {testimonials[currentIndex].logoFallback}
+                </div>
               </div>
               
               <div className="flex gap-1 mb-6">
@@ -167,10 +184,21 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-4 hover:opacity-100 transition cursor-pointer"
+              className="flex flex-col items-center justify-center p-4 hover:opacity-100 transition cursor-pointer group"
               onClick={() => goToSlide(index)}
             >
-              <div className="text-4xl mb-2">{testimonial.logo}</div>
+              <div className="h-16 w-full flex items-center justify-center mb-2">
+                <img
+                  src={`${import.meta.env.BASE_URL}${testimonial.logo.replace(/^\//, '')}`}
+                  alt={`${testimonial.company} Logo`}
+                  className="max-h-14 max-w-full object-contain grayscale group-hover:grayscale-0 transition"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'block';
+                  }}
+                />
+                <div className="hidden text-4xl">{testimonial.logoFallback}</div>
+              </div>
               <p className="text-xs text-center text-gray-600 font-medium">
                 {testimonial.company}
               </p>
