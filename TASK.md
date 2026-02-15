@@ -1,31 +1,9 @@
 # AT Clean Website - Task List
 
 ## Active Tasks
-- [ ] requires customer answer, do not act now.: **Verify "50+ Mitarbeiter" claim** (or change to generic "Qualifiziertes Team")
-- [ ] requires customer answer, do not act now.**Add real operating hours** (currently no 24/7 claim, but should clarify)
-- [ ] **Check Datenschutzerklärung** - needs to be copied 1:1 from atclean.de
-- [ ] **Check Impressum** - needs to be copied 1:1 from atclean.de
-- [ ] Build and deploy all changes
-- [ ] implement floating whatsapp button.
-https://api.whatsapp.com/send/?phone=4917687968242&text=Hallo+A-Team+Clean%2C+ich+habe+folgendes+Anliegen%3A&type=phone_number&app_absent=0
+- [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
+- [ ] **Add real operating hours** (requires customer answer - do not act now)
 - [ ] Test responsiveness on mobile/tablet/desktop
-- [ ] Update PLANNING.md for next agent
-- [ ] Add Datenschutzerklärung page (copy from atclean.de)
-https://atclean.de/datenschutzerklaerung/
-- [ ] Add Impressum page (copy from atclean.de)
-https://atclean.de/impressum/
-
-- [ ] videos must not delay the page loading, they should be loaded in the background
-- [ ] Add remaining service subpages (Hauswirtschaft, Fensterreinigung, Winterdienst)
-Services
-Grundreinigung
-Unterhaltsreinigung
-Bauendreinigung
-Hauswirtschaft
-Fensterreinigung
-Winterdienst
-FAQ
-(delete FAQ here since it is not a service, add it in the header menu.)
 - [ ] Integrate PHP contact form on IONOS
 - [ ] Configure custom domain (atclean.de)
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
@@ -70,6 +48,14 @@ FAQ
 ✓ Create TeamSection with creative design (2026-02-15)
 ✓ Change all service cards to blue gradients only (2026-02-15)
 ✓ Implement React Router with subpages (Grundreinigung, Unterhaltsreinigung, Bauendreinigung) (2026-02-15)
+✓ Add Datenschutzerklärung page (copied from atclean.de) (2026-02-15)
+✓ Add Impressum page (copied from atclean.de) (2026-02-15)
+✓ Implement floating WhatsApp button (2026-02-15)
+✓ Optimize video loading with lazy loading and preload metadata (2026-02-15)
+✓ Add remaining service subpages (Hauswirtschaft, Fensterreinigung, Winterdienst) (2026-02-15)
+✓ Move FAQ from services to header menu (2026-02-15)
+✓ Build and deploy all changes (2026-02-15)
+✓ Update PLANNING.md (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

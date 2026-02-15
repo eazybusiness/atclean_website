@@ -22,8 +22,10 @@ Modern, enterprise-grade website for A-Team Gebäudereinigung with React/Vite/Ta
 ### ✅ Completed Features
 1. **Core Pages**
    - Home page (Hero, Services, About, Team, Testimonials, Contact)
-   - Service subpages: Grundreinigung, Unterhaltsreinigung, Bauendreinigung
-   - FAQ page with 12 questions
+   - Service subpages: Grundreinigung, Unterhaltsreinigung, Bauendreinigung, Hauswirtschaft, Fensterreinigung, Winterdienst
+   - FAQ page with 12 questions (moved to header menu)
+   - Datenschutzerklärung page (copied from atclean.de)
+   - Impressum page (copied from atclean.de)
 
 2. **Branding**
    - Corporate colors: #006db5 (primary), #00a7d9 (secondary), #3bc8e8 (accent)
@@ -38,9 +40,10 @@ Modern, enterprise-grade website for A-Team Gebäudereinigung with React/Vite/Ta
    - Structured data for local business
 
 4. **Technical**
-   - React Router with 5 routes (/, /grundreinigung, /unterhaltsreinigung, /bauendreinigung, /faq)
+   - React Router with 10 routes (/, /grundreinigung, /unterhaltsreinigung, /bauendreinigung, /hauswirtschaft, /fensterreinigung, /winterdienst, /faq, /datenschutz, /impressum)
    - Responsive testimonial slider with doubled logo sizes
-   - Video sections (Hero + Team)
+   - Video sections (Hero + Team) with lazy loading optimization
+   - Floating WhatsApp button with hover tooltip
    - GitHub Actions auto-deployment
 
 ### ⚠️ Known Issues (Requires Client Action)
@@ -51,14 +54,10 @@ Modern, enterprise-grade website for A-Team Gebäudereinigung with React/Vite/Ta
 - No operating hours specified (add real Sprechzeiten)
 - All testimonials show 5 stars (need real ratings or remove)
 
-**Missing Pages:**
-- Datenschutzerklärung (must copy 1:1 from atclean.de)
-- Impressum (must copy 1:1 from atclean.de)
-- Remaining service pages: Hauswirtschaft, Fensterreinigung, Winterdienst
-
-**Assets:**
-- A-Team logo files uploaded but need to verify display
-- Favicon created (SVG) but PNG version recommended for better compatibility
+**Technical:**
+- PHP contact form integration on IONOS (pending)
+- Custom domain configuration (atclean.de) (pending)
+- Favicon PNG version recommended for better compatibility
 
 ### 📁 File Structure
 ```
@@ -74,34 +73,35 @@ Modern, enterprise-grade website for A-Team Gebäudereinigung with React/Vite/Ta
     atclean-logo.png (main logo, transparent)
     atclean-logo-white-bg.png (logo with white background)
   favicon.svg (AT branding)
-  favicon.png (recommended to add)
+  sitemap.xml
+  robots.txt
 
 /src
   /components
-    Navbar.jsx (with logo)
-    Hero.jsx (video header)
+    Navbar.jsx (with logo and FAQ link)
+    Hero.jsx (video header with lazy loading)
     Services.jsx (6 cards with links)
     About.jsx
     TeamSection.jsx (video instead of photo)
     Testimonials.jsx (slider with doubled logo sizes)
     Contact.jsx (with logo)
-    Footer.jsx (with logo and FAQ link)
+    Footer.jsx (with logo, all service links, legal links)
+    WhatsAppButton.jsx (floating button with hover tooltip)
   /pages
     Home.jsx (main landing page)
     Grundreinigung.jsx
     Unterhaltsreinigung.jsx
     Bauendreinigung.jsx
+    Hauswirtschaft.jsx
+    Fensterreinigung.jsx
+    Winterdienst.jsx
     FAQ.jsx
+    Datenschutz.jsx
+    Impressum.jsx
   /data
     seoKeywords.js (42 keyword combinations)
-  App.jsx (Router setup)
-    images/           # Scraped images from atclean.de
-    video_header.mp4  # Hero video
-  App.jsx
+  App.jsx (Router setup with 10 routes)
   main.jsx
-public/
-  sitemap.xml
-  robots.txt
 ```
 
 ## Design Patterns (IMPORTANT)
