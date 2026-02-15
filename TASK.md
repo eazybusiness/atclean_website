@@ -1,21 +1,34 @@
 # AT Clean Website - Task List
 
 ## Active Tasks
-- [ ] **Replace testimonial texts with real customer quotes** (currently placeholder)
-- [ ] **Verify "50+ Mitarbeiter" claim** (or change to generic "Qualifiziertes Team")
-- [ ] **Add real operating hours** (currently no 24/7 claim, but should clarify)
-- [ ] **Upload real A-Team logo** to `/public/assets/atclean-logo.png`
+- [ ] requires customer answer, do not act now.: **Verify "50+ Mitarbeiter" claim** (or change to generic "Qualifiziertes Team")
+- [ ] requires customer answer, do not act now.**Add real operating hours** (currently no 24/7 claim, but should clarify)
 - [ ] **Check Datenschutzerklärung** - needs to be copied 1:1 from atclean.de
 - [ ] **Check Impressum** - needs to be copied 1:1 from atclean.de
 - [ ] Build and deploy all changes
+- [ ] implement floating whatsapp button.
+https://api.whatsapp.com/send/?phone=4917687968242&text=Hallo+A-Team+Clean%2C+ich+habe+folgendes+Anliegen%3A&type=phone_number&app_absent=0
 - [ ] Test responsiveness on mobile/tablet/desktop
 - [ ] Update PLANNING.md for next agent
 - [ ] Add Datenschutzerklärung page (copy from atclean.de)
+https://atclean.de/datenschutzerklaerung/
 - [ ] Add Impressum page (copy from atclean.de)
+https://atclean.de/impressum/
+
+- [ ] videos must not delay the page loading, they should be loaded in the background
 - [ ] Add remaining service subpages (Hauswirtschaft, Fensterreinigung, Winterdienst)
+Services
+Grundreinigung
+Unterhaltsreinigung
+Bauendreinigung
+Hauswirtschaft
+Fensterreinigung
+Winterdienst
+FAQ
+(delete FAQ here since it is not a service, add it in the header menu.)
 - [ ] Integrate PHP contact form on IONOS
 - [ ] Configure custom domain (atclean.de)
-- [ ] Get real customer testimonials to replace placeholders
+- [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
 
 ## Completed Tasks
 ✓ Project planning and structure definition (2025-02-15)

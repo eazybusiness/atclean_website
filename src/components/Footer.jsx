@@ -30,10 +30,9 @@ export default function Footer() {
               <li><a href="/grundreinigung" className="hover:text-white transition">Grundreinigung</a></li>
               <li><a href="/unterhaltsreinigung" className="hover:text-white transition">Unterhaltsreinigung</a></li>
               <li><a href="/bauendreinigung" className="hover:text-white transition">Bauendreinigung</a></li>
-              <li>Hauswirtschaft</li>
-              <li>Fensterreinigung</li>
-              <li>Winterdienst</li>
-              <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
+              <li><a href="/hauswirtschaft" className="hover:text-white transition">Hauswirtschaft</a></li>
+              <li><a href="/fensterreinigung" className="hover:text-white transition">Fensterreinigung</a></li>
+              <li><a href="/winterdienst" className="hover:text-white transition">Winterdienst</a></li>
             </ul>
           </div>
 
@@ -57,6 +56,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} A-Team Gebäudereinigung. Alle Rechte vorbehalten.</p>
+          <div className="mt-4 space-x-4">
+            <a href="/datenschutz" className="hover:text-white transition">Datenschutzerklärung</a>
+            <span>|</span>
+            <a href="/impressum" className="hover:text-white transition">Impressum</a>
+          </div>
         </div>
       </div>
     </footer>

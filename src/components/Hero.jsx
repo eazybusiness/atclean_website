@@ -13,6 +13,8 @@ export default function Hero() {
         loop
         muted
         playsInline
+        preload="metadata"
+        loading="lazy"
         className="absolute w-full h-full object-cover scale-105"
       >
         <source src={`${import.meta.env.BASE_URL}video_header.mp4`} type="video/mp4" />

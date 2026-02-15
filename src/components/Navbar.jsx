@@ -43,6 +43,9 @@ export default function Navbar() {
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
                 Über uns
               </button>
+              <a href="/faq" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                FAQ
+              </a>
               <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
                 Kontakt
               </button>
@@ -78,6 +81,9 @@ export default function Navbar() {
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
               Über uns
             </button>
+            <a href="/faq" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+              FAQ
+            </a>
             <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
               Kontakt
             </button>
