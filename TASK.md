@@ -2,11 +2,9 @@
 
 ## Active Tasks
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
-- [ ] Test responsiveness on mobile/tablet/desktop
-- [ ] Integrate PHP contact form for  IONOS
-check /home/nop/CascadeProjects/gold_pfandleiher_web project as a reference. it is a working ionos form. but use. info@atclean.de as recipient email.
-- [ ] Configure custom domain (atclean.de)
+- [ ] Configure custom domain (atclean.de) - requires IONOS access
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
+- [ ] Upload PHP files to IONOS server and test live contact form
 
 
 ## Completed Tasks
@@ -69,6 +67,11 @@ check /home/nop/CascadeProjects/gold_pfandleiher_web project as a reference. it 
 ✓ Add GDPR-compliant checkbox to contact form (Datenschutzerklärung confirmation) (2026-02-15)
 ✓ Delete .planning/ directory with incorrect Meta Ads project content (2026-02-15)
 ✓ Fix 404 errors on service links - replaced anchor tags with React Router Link components (2026-02-15)
+✓ Test responsiveness on mobile/tablet/desktop - created RESPONSIVENESS_REPORT.md (2026-02-15)
+✓ Integrate IONOS PHP contact form with proper error handling and loading states (2026-02-15)
+✓ Copy working PHP code from gold_pfandleiher_web project (2026-02-15)
+✓ Create public/api/contact.php with info@atclean.de recipient (2026-02-15)
+✓ Update Contact.jsx to use PHP endpoint instead of mailto (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
