@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -15,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="/" className="flex-shrink-0 flex items-center gap-3 group">
+          <Link to="/" className="flex-shrink-0 flex items-center gap-3 group">
             <img 
               src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
               alt="A-Team Gebäudereinigung Logo" 
@@ -33,22 +36,35 @@ export default function Navbar() {
             <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               A-Team Gebäudereinigung
             </h1>
-          </a>
+          </Link>
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                Services
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                Über uns
-              </button>
-              <a href="/faq" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+              <Link to="/" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                Home
+              </Link>
+              {isHomePage && (
+                <>
+                  <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                    Services
+                  </button>
+                  <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                    Über uns
+                  </button>
+                </>
+              )}
+              <Link to="/faq" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
                 FAQ
-              </a>
-              <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
-                Kontakt
-              </button>
+              </Link>
+              {isHomePage ? (
+                <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                  Kontakt
+                </button>
+              ) : (
+                <Link to="/#contact" className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                  Kontakt
+                </Link>
+              )}
               <a href="tel:+4917687968242" className="text-primary hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition">
                 📞 +49 176 87968242
               </a>
@@ -75,18 +91,31 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
-              Über uns
-            </button>
-            <a href="/faq" className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+              Home
+            </Link>
+            {isHomePage && (
+              <>
+                <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
+                  Services
+                </button>
+                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
+                  Über uns
+                </button>
+              </>
+            )}
+            <Link to="/faq" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
               FAQ
-            </a>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
-              Kontakt
-            </button>
+            </Link>
+            {isHomePage ? (
+              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
+                Kontakt
+              </button>
+            ) : (
+              <Link to="/#contact" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+                Kontakt
+              </Link>
+            )}
             <a href="tel:+4917687968242" className="text-primary hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
               📞 +49 176 87968242
             </a>

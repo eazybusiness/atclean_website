@@ -3,6 +3,8 @@
 ## Active Tasks
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
 - [ ] Configure custom domain (atclean.de) - requires IONOS access
+add a home menu item. when I am on the faq or service sites i need to have a way to go back.
+the logo in the header has the wrong link, it should go to the home page.
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
 - [ ] Upload PHP files to IONOS server and test live contact form
 

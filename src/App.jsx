@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Grundreinigung from './pages/Grundreinigung'
 import Unterhaltsreinigung from './pages/Unterhaltsreinigung'
@@ -16,6 +17,7 @@ import Impressum from './pages/Impressum'
 function App() {
   return (
     <Router basename="/atclean_website">
+      <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
         <Routes>
