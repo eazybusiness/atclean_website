@@ -6,9 +6,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-              A-Team Gebäudereinigung
-            </h3>
+            <div className="mb-4">
+              <img 
+                src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
+                alt="A-Team Gebäudereinigung Logo" 
+                className="h-16 w-auto object-contain mb-3"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                A-Team Gebäudereinigung
+              </h3>
+            </div>
             <p className="text-gray-400">
               Ihr zuverlässiger Partner für professionelle Gebäudereinigung
             </p>

@@ -78,32 +78,37 @@ export default function TeamSection() {
             </div>
           </div>
           
-          {/* Right side - Team Photo with creative design */}
+          {/* Right side - Team Photo with Creative Design */}
           <div className="order-1 lg:order-2 relative">
-            <div className="relative">
-              {/* Decorative frame elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 border-t-4 border-l-4 border-accent rounded-tl-3xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-secondary rounded-br-3xl"></div>
+            <div className="relative group">
+              {/* Decorative gradient frame */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
               
-              {/* Main image container with gradient border */}
-              <div className="relative p-1 bg-gradient-to-br from-accent via-secondary to-primary rounded-2xl shadow-2xl">
-                <div className="bg-white p-2 rounded-2xl">
-                  <img
-                    src="/assets/images/Team.jpg"
-                    alt="A-Team Clean Gebäudereinigung Team"
-                    className="w-full h-auto rounded-xl object-cover shadow-lg"
+              {/* Main photo container */}
+              <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/images/Team.jpg`}
+                  alt="A-Team Gebäudereinigung Team"
+                  className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    e.target.src = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80';
+                  }}
+                />
+                
+                {/* Logo Watermark Overlay */}
+                <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
+                    alt="A-Team Logo" 
+                    className="h-12 w-auto object-contain"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.nextElementSibling.style.display = 'flex';
                     }}
                   />
-                  {/* Fallback placeholder */}
-                  <div className="hidden w-full aspect-[4/3] bg-gradient-to-br from-accent/20 to-secondary/20 rounded-xl items-center justify-center">
-                    <div className="text-center p-8">
-                      <svg className="w-24 h-24 mx-auto text-primary/30 mb-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                      </svg>
-                      <p className="text-gray-500 text-sm">Team-Foto wird geladen...</p>
+                  <div className="hidden items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      AT
                     </div>
                   </div>
                 </div>

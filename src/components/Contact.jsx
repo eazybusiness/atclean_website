@@ -106,7 +106,17 @@ export default function Contact() {
 
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Kontaktinformationen</h3>
+              <div className="mb-6">
+                <img 
+                  src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
+                  alt="A-Team Gebäudereinigung Logo" 
+                  className="h-16 w-auto object-contain mb-4"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+                <h3 className="text-2xl font-bold text-gray-900">Kontaktinformationen</h3>
+              </div>
               
               <div className="space-y-4">
                 <div className="flex items-start">
