@@ -3,37 +3,43 @@ const services = [
     title: 'Grundreinigung',
     description: 'Gründliche Tiefenreinigung für Ihre Räumlichkeiten. Perfekt für den Start oder nach Renovierungen.',
     icon: '✨',
-    color: 'from-primary to-secondary'
+    color: 'from-primary to-secondary',
+    link: '/grundreinigung'
   },
   {
     title: 'Unterhaltsreinigung',
     description: 'Regelmäßige professionelle Reinigung für dauerhaft saubere und gepflegte Räume.',
     icon: '🏢',
-    color: 'from-secondary to-accent'
+    color: 'from-secondary to-accent',
+    link: '/unterhaltsreinigung'
   },
   {
     title: 'Bauendreinigung',
     description: 'Professionelle Reinigung nach Bau- oder Renovierungsarbeiten für bezugsfertige Objekte.',
     icon: '🏗️',
-    color: 'from-accent to-secondary'
+    color: 'from-accent to-secondary',
+    link: '/bauendreinigung'
   },
   {
     title: 'Hauswirtschaft',
     description: 'Umfassende hauswirtschaftliche Dienstleistungen für Ihr Wohlbefinden.',
     icon: '🏠',
-    color: 'from-primary to-accent'
+    color: 'from-primary to-accent',
+    link: '/hauswirtschaft'
   },
   {
     title: 'Fensterreinigung',
     description: 'Streifenfreie Glasreinigung für kristallklare Durchsicht und perfekten Glanz.',
     icon: '🪟',
-    color: 'from-secondary to-primary'
+    color: 'from-secondary to-primary',
+    link: '/fensterreinigung'
   },
   {
     title: 'Winterdienst',
     description: 'Zuverlässiger Schneeräum- und Streudienst für sichere Wege und Zufahrten.',
     icon: '❄️',
-    color: 'from-accent to-primary'
+    color: 'from-accent to-primary',
+    link: '/winterdienst'
   }
 ];
 
@@ -72,12 +78,15 @@ export default function Services() {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <button className="text-primary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Mehr erfahren
+                <a
+                  href={service.link || "#contact"}
+                  className="inline-block text-primary hover:text-secondary font-semibold transition mt-4"
+                >
+                  Mehr erfahren →
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           ))}

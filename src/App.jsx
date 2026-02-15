@@ -1,24 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import About from './components/About'
-import TeamSection from './components/TeamSection'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import Grundreinigung from './pages/Grundreinigung'
+import Unterhaltsreinigung from './pages/Unterhaltsreinigung'
+import Bauendreinigung from './pages/Bauendreinigung'
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <TeamSection />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Router basename="/atclean_website">
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/grundreinigung" element={<Grundreinigung />} />
+          <Route path="/unterhaltsreinigung" element={<Unterhaltsreinigung />} />
+          <Route path="/bauendreinigung" element={<Bauendreinigung />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
