@@ -3,7 +3,8 @@
 ## Active Tasks
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
 - [ ] Test responsiveness on mobile/tablet/desktop
-- [ ] Integrate PHP contact form on IONOS
+- [ ] Integrate PHP contact form for  IONOS
+check /home/nop/CascadeProjects/gold_pfandleiher_web project as a reference. it is a working ionos form. but use. info@atclean.de as recipient email.
 - [ ] Configure custom domain (atclean.de)
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
 

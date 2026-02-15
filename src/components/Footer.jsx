@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -27,12 +29,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/grundreinigung" className="hover:text-white transition">Grundreinigung</a></li>
-              <li><a href="/unterhaltsreinigung" className="hover:text-white transition">Unterhaltsreinigung</a></li>
-              <li><a href="/bauendreinigung" className="hover:text-white transition">Bauendreinigung</a></li>
-              <li><a href="/hauswirtschaft" className="hover:text-white transition">Hauswirtschaft</a></li>
-              <li><a href="/fensterreinigung" className="hover:text-white transition">Fensterreinigung</a></li>
-              <li><a href="/winterdienst" className="hover:text-white transition">Winterdienst</a></li>
+              <li><Link to="/grundreinigung" className="hover:text-white transition">Grundreinigung</Link></li>
+              <li><Link to="/unterhaltsreinigung" className="hover:text-white transition">Unterhaltsreinigung</Link></li>
+              <li><Link to="/bauendreinigung" className="hover:text-white transition">Bauendreinigung</Link></li>
+              <li><Link to="/hauswirtschaft" className="hover:text-white transition">Hauswirtschaft</Link></li>
+              <li><Link to="/fensterreinigung" className="hover:text-white transition">Fensterreinigung</Link></li>
+              <li><Link to="/winterdienst" className="hover:text-white transition">Winterdienst</Link></li>
             </ul>
           </div>
 
@@ -62,9 +64,9 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} A-Team Gebäudereinigung. Alle Rechte vorbehalten.</p>
           <div className="mt-4 space-x-4">
-            <a href="/datenschutz" className="hover:text-white transition">Datenschutzerklärung</a>
+            <Link to="/datenschutz" className="hover:text-white transition">Datenschutzerklärung</Link>
             <span>|</span>
-            <a href="/impressum" className="hover:text-white transition">Impressum</a>
+            <Link to="/impressum" className="hover:text-white transition">Impressum</Link>
           </div>
         </div>
       </div>

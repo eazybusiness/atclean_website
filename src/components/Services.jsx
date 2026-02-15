@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const services = [
   {
     title: 'Grundreinigung',
@@ -78,15 +80,12 @@ export default function Services() {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <a
-                  href={service.link || "#contact"}
-                  className="inline-block text-primary hover:text-secondary font-semibold transition mt-4"
+                <Link
+                  to={service.link || "#contact"}
+                  className="inline-flex items-center gap-1 text-primary hover:text-secondary font-semibold transition mt-4"
                 >
                   Mehr erfahren →
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
