@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Grundreinigung from './pages/Grundreinigung'
 import Unterhaltsreinigung from './pages/Unterhaltsreinigung'
 import Bauendreinigung from './pages/Bauendreinigung'
+import FAQ from './pages/FAQ'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/grundreinigung" element={<Grundreinigung />} />
           <Route path="/unterhaltsreinigung" element={<Unterhaltsreinigung />} />
           <Route path="/bauendreinigung" element={<Bauendreinigung />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
         <Footer />
       </div>

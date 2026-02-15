@@ -1,7 +1,21 @@
 # AT Clean Website - Task List
 
 ## Active Tasks
-None - All tasks completed! 🎉
+- [ ] **Replace testimonial texts with real customer quotes** (currently placeholder)
+- [ ] **Verify "50+ Mitarbeiter" claim** (or change to generic "Qualifiziertes Team")
+- [ ] **Add real operating hours** (currently no 24/7 claim, but should clarify)
+- [ ] **Upload real A-Team logo** to `/public/assets/atclean-logo.png`
+- [ ] **Check Datenschutzerklärung** - needs to be copied 1:1 from atclean.de
+- [ ] **Check Impressum** - needs to be copied 1:1 from atclean.de
+- [ ] Build and deploy all changes
+- [ ] Test responsiveness on mobile/tablet/desktop
+- [ ] Update PLANNING.md for next agent
+- [ ] Add Datenschutzerklärung page (copy from atclean.de)
+- [ ] Add Impressum page (copy from atclean.de)
+- [ ] Add remaining service subpages (Hauswirtschaft, Fensterreinigung, Winterdienst)
+- [ ] Integrate PHP contact form on IONOS
+- [ ] Configure custom domain (atclean.de)
+- [ ] Get real customer testimonials to replace placeholders
 
 ## Completed Tasks
 ✓ Project planning and structure definition (2025-02-15)
@@ -21,6 +35,28 @@ None - All tasks completed! 🎉
 ✓ Enhance design to enterprise-grade (2025-02-15)
 ✓ Add company stats and animations (2025-02-15)
 ✓ Deploy to GitHub Pages (2025-02-15)
+✓ Integrate A-Team logo files (logo_alpha.png, A-Team-Logo.png) (2026-02-15)
+✓ Double testimonial card logo sizes (max-h-20 → max-h-40) (2026-02-15)
+✓ Replace team photo with cleaning video (team-cleaning.mp4) (2026-02-15)
+✓ Create FAQ page with 12 placeholder questions (2026-02-15)
+✓ Add FAQ route and footer link (2026-02-15)
+✓ Content audit for accuracy (CONTENT_AUDIT.md) (2026-02-15)
+✓ Create responsiveness test plan (RESPONSIVENESS_TEST_PLAN.md) (2026-02-15)
+✓ Logo integration in Navbar, Footer, Team, Contact sections (2026-02-15)
+✓ Create SVG favicon with AT branding (2026-02-15)
+✓ Initial project setup with Vite + React + Tailwind (2026-02-15)
+✓ Scrape content from atclean.de (2026-02-15)
+✓ Create all main components (Navbar, Hero, Services, About, Contact, Footer) (2026-02-15)
+✓ Add Testimonials section with slider (2026-02-15)
+✓ Implement SEO optimization (meta tags, structured data) (2026-02-15)
+✓ Deploy to GitHub Pages (2026-02-15)
+✓ Fix video header path for GitHub Pages (2026-02-15)
+✓ Create client proposal document (ANGEBOT_ATCLEAN.md) (2026-02-15)
+✓ Implement corporate branding (colors #3bc8e8, #00a7d9, #006db5) (2026-02-15)
+✓ Add real client logos (01-20) to testimonials (2026-02-15)
+✓ Create TeamSection with creative design (2026-02-15)
+✓ Change all service cards to blue gradients only (2026-02-15)
+✓ Implement React Router with subpages (Grundreinigung, Unterhaltsreinigung, Bauendreinigung) (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

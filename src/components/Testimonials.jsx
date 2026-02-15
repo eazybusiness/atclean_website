@@ -140,11 +140,11 @@ export default function Testimonials() {
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-primary"></div>
             
             <div className="flex flex-col items-center text-center">
-              <div className="mb-6 h-24 flex items-center justify-center">
+              <div className="mb-6 h-48 flex items-center justify-center">
                 <img
                   src={`${import.meta.env.BASE_URL}${testimonials[currentIndex].logo.replace(/^\//, '')}`}
                   alt={`${testimonials[currentIndex].company} Logo`}
-                  className="max-h-20 max-w-xs object-contain"
+                  className="max-h-40 max-w-md object-contain"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextElementSibling.style.display = 'block';

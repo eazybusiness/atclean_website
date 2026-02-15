@@ -27,12 +27,13 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Grundreinigung</li>
-              <li>Unterhaltsreinigung</li>
-              <li>Bauendreinigung</li>
+              <li><a href="/grundreinigung" className="hover:text-white transition">Grundreinigung</a></li>
+              <li><a href="/unterhaltsreinigung" className="hover:text-white transition">Unterhaltsreinigung</a></li>
+              <li><a href="/bauendreinigung" className="hover:text-white transition">Bauendreinigung</a></li>
               <li>Hauswirtschaft</li>
               <li>Fensterreinigung</li>
               <li>Winterdienst</li>
+              <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
             </ul>
           </div>
 

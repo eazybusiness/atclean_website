@@ -84,16 +84,23 @@ export default function TeamSection() {
               {/* Decorative gradient frame */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
               
-              {/* Main photo container */}
+              {/* Main video container */}
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <img
-                  src={`${import.meta.env.BASE_URL}assets/images/Team.jpg`}
-                  alt="A-Team Gebäudereinigung Team"
-                  className="w-full h-auto object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80';
-                  }}
-                />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover object-left"
+                  style={{ objectPosition: 'left center' }}
+                >
+                  <source src={`${import.meta.env.BASE_URL}assets/videos/team-cleaning.mp4`} type="video/mp4" />
+                  <img
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="A-Team Gebäudereinigung bei der Arbeit"
+                    className="w-full h-auto object-cover"
+                  />
+                </video>
                 
                 {/* Logo Watermark Overlay */}
                 <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg">
