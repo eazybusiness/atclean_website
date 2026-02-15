@@ -2,39 +2,39 @@ const services = [
   {
     title: 'Grundreinigung',
     description: 'Gründliche Tiefenreinigung für Ihre Räumlichkeiten. Perfekt für den Start oder nach Renovierungen.',
-    icon: '🧹',
-    color: 'from-blue-500 to-blue-600',
+    icon: '✨',
+    color: 'from-primary to-secondary'
   },
   {
     title: 'Unterhaltsreinigung',
     description: 'Regelmäßige professionelle Reinigung für dauerhaft saubere und gepflegte Räume.',
-    icon: '✨',
-    color: 'from-purple-500 to-purple-600',
+    icon: '🏢',
+    color: 'from-secondary to-accent'
   },
   {
     title: 'Bauendreinigung',
     description: 'Professionelle Reinigung nach Bau- oder Renovierungsarbeiten für bezugsfertige Objekte.',
     icon: '🏗️',
-    color: 'from-orange-500 to-orange-600',
+    color: 'from-accent to-secondary'
   },
   {
     title: 'Hauswirtschaft',
     description: 'Umfassende hauswirtschaftliche Dienstleistungen für Ihr Wohlbefinden.',
     icon: '🏠',
-    color: 'from-green-500 to-green-600',
+    color: 'from-primary to-accent'
   },
   {
     title: 'Fensterreinigung',
-    description: 'Streifenfreie Fensterreinigung für klare Durchsicht und mehr Licht.',
+    description: 'Streifenfreie Glasreinigung für kristallklare Durchsicht und perfekten Glanz.',
     icon: '🪟',
-    color: 'from-cyan-500 to-cyan-600',
+    color: 'from-secondary to-primary'
   },
   {
     title: 'Winterdienst',
-    description: 'Zuverlässiger Winterdienst für sichere Wege und Zufahrten.',
+    description: 'Zuverlässiger Schneeräum- und Streudienst für sichere Wege und Zufahrten.',
     icon: '❄️',
-    color: 'from-indigo-500 to-indigo-600',
-  },
+    color: 'from-accent to-primary'
+  }
 ];
 
 export default function Services() {

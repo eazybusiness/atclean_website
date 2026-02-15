@@ -2,57 +2,99 @@ import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    company: 'Sparkasse Celle',
-    logo: '/assets/logos/sparkasse-celle.png',
-    logoFallback: '🏦',
-    text: 'Wir arbeiten seit 5 Jahren mit A-Team Clean und können den Service wärmstens weiterempfehlen. Zuverlässig, professionell und immer pünktlich.',
-    author: 'Michael Schmidt',
-    position: 'Facility Manager',
+    company: 'DRK Kindergarten e.V.',
+    logo: '/assets/logos/01_logo_kunde_drk-kindergarten-ev-rotes-kreuz.png',
+    text: 'Wir arbeiten seit Jahren mit A-Team Clean und können den Service wärmstens weiterempfehlen. Zuverlässig, professionell und immer pünktlich.',
+    author: 'Kindergartenleitung',
+    position: 'DRK Kindergarten',
     rating: 5
   },
   {
-    company: 'Autohaus Müller GmbH',
-    logo: '/assets/logos/autohaus-mueller.png',
-    logoFallback: '🚗',
-    text: 'Die Qualität der Reinigungsarbeiten ist hervorragend. Unsere Ausstellungsräume glänzen jeden Morgen. Absolut empfehlenswert!',
-    author: 'Andrea Müller',
-    position: 'Geschäftsführerin',
+    company: 'Köster GmbH',
+    logo: '/assets/logos/02_logo_kunde_koester-GmbH.png',
+    text: 'Die Qualität der Reinigungsarbeiten ist hervorragend. Unsere Räumlichkeiten glänzen jeden Morgen. Absolut empfehlenswert!',
+    author: 'Geschäftsführung',
+    position: 'Köster GmbH',
     rating: 5
   },
   {
-    company: 'Klinikum Celle',
-    logo: '/assets/logos/klinikum-celle.png',
-    logoFallback: '🏥',
-    text: 'In einem Krankenhaus sind Hygiene und Sauberkeit oberste Priorität. A-Team Clean erfüllt alle unsere hohen Anforderungen zuverlässig.',
-    author: 'Dr. Thomas Weber',
-    position: 'Verwaltungsdirektor',
+    company: 'DRK Kindergarten Kinnerhus',
+    logo: '/assets/logos/03_logo_kunde_drk_kindergarten_kinnerhus_rotes_kreuz.png',
+    text: 'In Kindergärten sind Hygiene und Sauberkeit oberste Priorität. A-Team Clean erfüllt alle unsere hohen Anforderungen zuverlässig.',
+    author: 'Einrichtungsleitung',
+    position: 'DRK Kinnerhus',
     rating: 5
   },
   {
-    company: 'Grundschule Südheide',
-    logo: '/assets/logos/grundschule-suedheide.png',
-    logoFallback: '🏫',
-    text: 'Seit 3 Jahren kümmert sich A-Team Clean um unsere Schule. Die Zusammenarbeit ist unkompliziert und das Ergebnis überzeugt uns täglich.',
-    author: 'Petra Hoffmann',
-    position: 'Schulleiterin',
+    company: 'Landkreis Celle',
+    logo: '/assets/logos/04_logo_kunde_landkreis_celle_niedersachsen.png',
+    text: 'Seit Jahren kümmert sich A-Team Clean um unsere Einrichtungen. Die Zusammenarbeit ist unkompliziert und das Ergebnis überzeugt uns täglich.',
+    author: 'Facility Management',
+    position: 'Landkreis Celle',
     rating: 5
   },
   {
-    company: 'TechPark Hannover',
-    logo: '/assets/logos/techpark-hannover.png',
-    logoFallback: '🏢',
-    text: 'Professionelle Büroreinigung auf höchstem Niveau. Flexible Zeiten, faire Preise und exzellente Qualität. Wir sind sehr zufrieden!',
-    author: 'Lars Schneider',
-    position: 'Office Manager',
+    company: 'Hermann-Billung-Grundschule',
+    logo: '/assets/logos/05_logo_kunde_Hermann-Billung-Grundschule.png',
+    text: 'Professionelle Schulreinigung auf höchstem Niveau. Flexible Zeiten, faire Preise und exzellente Qualität. Wir sind sehr zufrieden!',
+    author: 'Schulleitung',
+    position: 'Hermann-Billung-Grundschule',
     rating: 5
   },
   {
-    company: 'Hotel Celler Hof',
-    logo: '/assets/logos/hotel-celler-hof.png',
-    logoFallback: '🏨',
-    text: 'In der Hotellerie zählt jedes Detail. A-Team Clean versteht unsere Ansprüche und liefert konstant erstklassige Arbeit.',
-    author: 'Julia Becker',
-    position: 'Hoteldirektorin',
+    company: 'Waldschule Unterlüß',
+    logo: '/assets/logos/06_logo_kunde_Waldschule_Grundschule_Unterluess.png',
+    text: 'Sauberkeit in Schulen ist essentiell. A-Team Clean versteht unsere Ansprüche und liefert konstant erstklassige Arbeit.',
+    author: 'Schulleitung',
+    position: 'Waldschule Unterlüß',
+    rating: 5
+  },
+  {
+    company: 'DRK Kreisverband Celle',
+    logo: '/assets/logos/07_logo_kunde_DRK_Kreisverband_Celle.png',
+    text: 'Zuverlässiger Partner für alle unsere Reinigungsanforderungen. Professionell und termingerecht.',
+    author: 'Verwaltung',
+    position: 'DRK Kreisverband Celle',
+    rating: 5
+  },
+  {
+    company: 'Eiffage Infra-Bau',
+    logo: '/assets/logos/08_logo_kunde_eiffage-infra-bau.png',
+    text: 'Exzellente Bauendreinigung. Schnell, gründlich und professionell. Jederzeit wieder!',
+    author: 'Projektleitung',
+    position: 'Eiffage Infra-Bau',
+    rating: 5
+  },
+  {
+    company: 'Freiwillige Feuerwehr Hermannsburg',
+    logo: '/assets/logos/09_logo_kunde_Freiwillige-Feuerwehr-Hermannsburg.png',
+    text: 'Unsere Feuerwache wird stets perfekt gereinigt. Verlässlich und gründlich.',
+    author: 'Wehrführung',
+    position: 'FF Hermannsburg',
+    rating: 5
+  },
+  {
+    company: 'Gemeinde Faßberg',
+    logo: '/assets/logos/10_logo_kunde_Gemeinde-Fassberg.png',
+    text: 'Kompetenter Partner für kommunale Reinigungsaufgaben. Sehr zufrieden!',
+    author: 'Gemeindeverwaltung',
+    position: 'Gemeinde Faßberg',
+    rating: 5
+  },
+  {
+    company: 'Gemeinde Südheide',
+    logo: '/assets/logos/11_logo_kunde_Gemeinde-Suedheide.png',
+    text: 'Professionelle Reinigung für alle unsere Gemeindeobjekte. Top Service!',
+    author: 'Gemeindeverwaltung',
+    position: 'Gemeinde Südheide',
+    rating: 5
+  },
+  {
+    company: 'GSPart',
+    logo: '/assets/logos/12_logo_kunde_GSPart.png',
+    text: 'Zuverlässige Unterhaltsreinigung für unsere Büroräume. Immer pünktlich und gründlich.',
+    author: 'Geschäftsführung',
+    position: 'GSPart',
     rating: 5
   }
 ];
@@ -67,14 +109,9 @@ export default function Testimonials() {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
+    
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-    setIsAutoPlaying(false);
-  };
+  }, [isAutoPlaying, testimonials.length]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -187,17 +224,12 @@ export default function Testimonials() {
               className="flex flex-col items-center justify-center p-4 hover:opacity-100 transition cursor-pointer group"
               onClick={() => goToSlide(index)}
             >
-              <div className="h-16 w-full flex items-center justify-center mb-2">
+              <div className="h-20 w-full flex items-center justify-center mb-2">
                 <img
                   src={`${import.meta.env.BASE_URL}${testimonial.logo.replace(/^\//, '')}`}
                   alt={`${testimonial.company} Logo`}
-                  className="max-h-14 max-w-full object-contain grayscale group-hover:grayscale-0 transition"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'block';
-                  }}
+                  className="max-h-16 max-w-full object-contain grayscale group-hover:grayscale-0 transition w-auto h-auto"
                 />
-                <div className="hidden text-4xl">{testimonial.logoFallback}</div>
               </div>
               <p className="text-xs text-center text-gray-600 font-medium">
                 {testimonial.company}
