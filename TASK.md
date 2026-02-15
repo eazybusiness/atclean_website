@@ -68,6 +68,7 @@ check /home/nop/CascadeProjects/gold_pfandleiher_web project as a reference. it 
 ✓ Update Bauendreinigung page with real content (2026-02-15)
 ✓ Add GDPR-compliant checkbox to contact form (Datenschutzerklärung confirmation) (2026-02-15)
 ✓ Delete .planning/ directory with incorrect Meta Ads project content (2026-02-15)
+✓ Fix 404 errors on service links - replaced anchor tags with React Router Link components (2026-02-15)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

@@ -8,11 +8,48 @@ export default function Contact() {
     message: '',
     privacyAccepted: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:info@atclean.de?subject=Kontaktanfrage von ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0A%0D%0ANachricht:%0D%0A${formData.message}`;
-    window.location.href = mailtoLink;
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('message', formData.message);
+
+      const response = await fetch('/api/contact.php', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({ type: 'success', message: result.message });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          privacyAccepted: false,
+        });
+      } else {
+        setSubmitStatus({ type: 'error', message: result.message });
+      }
+    } catch (error) {
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -111,12 +148,22 @@ export default function Contact() {
                 </label>
               </div>
 
+              {submitStatus && (
+                <div className={`p-4 rounded-lg ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
               <button
                 type="submit"
-                disabled={!formData.privacyAccepted}
+                disabled={!formData.privacyAccepted || isSubmitting}
                 className="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Nachricht senden
+                {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
               </button>
             </form>
           </div>
