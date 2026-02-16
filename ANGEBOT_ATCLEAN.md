@@ -321,35 +321,6 @@ H1: Ihr zuverlässiger Partner für Ihre Gebäudereinigung
 
 ---
 
-## ROI-Berechnung
-
-### Investition vs. Ertrag
-
-**Einmalige Investition:** €250,00
-
-**Erwartete Vorteile (pro Jahr):**
-
-1. **Mehr organische Anfragen**
-   - +250% Traffic = +15 Anfragen/Monat mehr
-   - Conversion-Rate: 20% (3 neue Kunden/Monat)
-   - Durchschnittlicher Auftragswert: €800
-   - **Zusatzumsatz: €28.800/Jahr**
-
-2. **Bessere Conversion-Rate**
-   - Aktuell: ~2% (geschätzt)
-   - Mit neuer Seite: ~4-5%
-   - Bei 500 Besuchern/Monat: +10-15 Anfragen mehr
-   - **Zusatzumsatz: €9.600/Jahr**
-
-3. **Professionelleres Image**
-   - Höhere Preise durchsetzbar (+10-15%)
-   - Weniger Preisverhandlungen
-   - **Zusatzertrag: €5.000/Jahr**
-
-**Gesamt-ROI: €43.400/Jahr bei €250 Investition**  
-**Return on Investment: 17.360%**
-
----
 
 ## Technische Spezifikationen
 
@@ -503,5 +474,6 @@ const services = [
 
 ---
 
-*Erstellt von EazyBusiness Web Solutions*  
+*Erstellt von Nils Peters Web Solutions*  
+np@hiplus.de
 *15. Februar 2026*

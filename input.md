@@ -34,3 +34,23 @@ Website Management
 Web Development
 Website Optimization
 Web Design
+
+
+Kundenchat: 
+hi
+8:55 AM
+
+meine Webseite habe ich schon erstellt
+8:55 AM
+
+es müsste nur wie in der Beschreibung steht überarbeitet werden an Design und SEO-Optimierung
+8:56 AM
+
+Hallo, können Sie mir den Link zu Ihrer aktuellen Webseite schicken? Dann sehe ich es mir gerne unverbindlich an.
+9:42 AM
+
+Ihr 5 Punkte Plan erscheint mir eine gute Basis für die Zusammenarbeit. Gerne bringe ich Ideen und technisches Know How mit ein.
+9:44 AM
+
+R
+www.atclean.de

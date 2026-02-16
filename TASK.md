@@ -1,6 +1,10 @@
 # AT Clean Website - Task List
 
 ## Active Tasks
+Check: 
+/home/nop/CascadeProjects/atclean_website/content.txt
+is this usefull content for the website? it has been taken off the old website. I think, we  should use it or part of it. Or are we using it already in a refrased form?
+
 - [ ] **Verify "50+ Mitarbeiter" claim** (requires customer answer - do not act now)
 - [ ] Configure custom domain (atclean.de) - requires IONOS access
 - [ ] Get real customer testimonials to replace placeholders (waiting for info from customer)
