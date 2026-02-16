@@ -353,6 +353,6 @@ Bei Fragen zu diesem Bericht oder zur Website-Nutzung stehe ich gerne zur Verfü
 
 ---
 
-**Erstellt von:** Cascade AI Development  
+**Erstellt von:** Nils Peters 
 **Datum:** 16. Februar 2026  
 **Version:** 1.0
