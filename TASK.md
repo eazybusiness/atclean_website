@@ -92,6 +92,10 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Add hero background images to all 6 service detail pages (2026-02-18)
 ✓ Create secondary navigation menu (ServiceNav) for service pages (2026-02-18)
 ✓ Remove icons from service cards, replaced with background images (2026-02-18)
+✓ Add Membership section with Berufsgenossenschaft and Handwerkskammer logos (2026-02-18)
+✓ Update navigation menu: Home → Startseite, Services → Leistungen with dropdown (2026-02-18)
+✓ Add "Über uns" to navigation menu (2026-02-18)
+✓ Deploy changes to GitHub Pages (https://eazybusiness.github.io/atclean_website/) (2026-02-18)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
