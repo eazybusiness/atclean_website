@@ -96,6 +96,9 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Update navigation menu: Home → Startseite, Services → Leistungen with dropdown (2026-02-18)
 ✓ Add "Über uns" to navigation menu (2026-02-18)
 ✓ Deploy changes to GitHub Pages (https://eazybusiness.github.io/atclean_website/) (2026-02-18)
+✓ Fix Leistungen dropdown menu hover behavior (removed gap between button and menu) (2026-02-18)
+✓ Create comprehensive Karriere page with job openings and benefits (2026-02-18)
+✓ Add Karriere to main navigation menu (2026-02-18)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
