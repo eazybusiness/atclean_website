@@ -3,8 +3,18 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+
+  const services = [
+    { name: 'Grundreinigung', path: '/grundreinigung' },
+    { name: 'Unterhaltsreinigung', path: '/unterhaltsreinigung' },
+    { name: 'Bauendreinigung', path: '/bauendreinigung' },
+    { name: 'Hauswirtschaft', path: '/hauswirtschaft' },
+    { name: 'Fensterreinigung', path: '/fensterreinigung' },
+    { name: 'Winterdienst', path: '/winterdienst' }
+  ];
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -41,21 +51,45 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                Home
+                Startseite
               </Link>
-              {isHomePage && (
-                <>
-                  <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                    Services
-                  </button>
-                  <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                    Über uns
-                  </button>
-                </>
+              {isHomePage ? (
+                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                  Über uns
+                </button>
+              ) : (
+                <Link to="/#about" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                  Über uns
+                </Link>
               )}
-              <Link to="/faq" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
-                FAQ
-              </Link>
+              
+              {/* Leistungen Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <button className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition flex items-center gap-1">
+                  Leistungen
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+                    {services.map((service) => (
+                      <Link
+                        key={service.path}
+                        to={service.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary transition"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               {isHomePage ? (
                 <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
                   Kontakt
@@ -92,21 +126,45 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
             <Link to="/" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
-              Home
+              Startseite
             </Link>
-            {isHomePage && (
-              <>
-                <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
-                  Services
-                </button>
-                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
-                  Über uns
-                </button>
-              </>
+            {isHomePage ? (
+              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
+                Über uns
+              </button>
+            ) : (
+              <Link to="/#about" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+                Über uns
+              </Link>
             )}
-            <Link to="/faq" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
-              FAQ
-            </Link>
+            
+            {/* Leistungen Mobile Submenu */}
+            <div>
+              <button 
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+              >
+                Leistungen
+                <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isServicesOpen && (
+                <div className="pl-6 space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      onClick={() => setIsOpen(false)}
+                      className="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {isHomePage ? (
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
                 Kontakt
