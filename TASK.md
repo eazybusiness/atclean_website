@@ -86,6 +86,12 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Create executive summary (1-page abstract) for busy CEO (2026-02-16)
 ✓ Develop multi-location SEO strategy for 3 cities (Celle, Hannover, Hamburg) (2026-02-16)
 ✓ Explain subdomain vs. subdirectory options with cost-benefit analysis (2026-02-16)
+✓ Add background images to service cards on homepage with creative text overlays (2026-02-18)
+✓ Move References section to top of homepage (after Hero) with 100% width (2026-02-18)
+✓ Remove duplicate "Facility Management" and "Landkreis Celle" references (2026-02-18)
+✓ Add hero background images to all 6 service detail pages (2026-02-18)
+✓ Create secondary navigation menu (ServiceNav) for service pages (2026-02-18)
+✓ Remove icons from service cards, replaced with background images (2026-02-18)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

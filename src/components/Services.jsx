@@ -4,43 +4,37 @@ const services = [
   {
     title: 'Grundreinigung',
     description: 'Gründliche Tiefenreinigung für Ihre Räumlichkeiten. Perfekt für den Start oder nach Renovierungen.',
-    icon: '✨',
-    color: 'from-primary to-secondary',
+    image: '/assets/images/services/grundreinigung.png',
     link: '/grundreinigung'
   },
   {
     title: 'Unterhaltsreinigung',
     description: 'Regelmäßige professionelle Reinigung für dauerhaft saubere und gepflegte Räume.',
-    icon: '🏢',
-    color: 'from-secondary to-accent',
+    image: '/assets/images/services/unterhaltsreinigung.png',
     link: '/unterhaltsreinigung'
   },
   {
     title: 'Bauendreinigung',
     description: 'Professionelle Reinigung nach Bau- oder Renovierungsarbeiten für bezugsfertige Objekte.',
-    icon: '🏗️',
-    color: 'from-accent to-secondary',
+    image: '/assets/images/services/bauendreinigung.png',
     link: '/bauendreinigung'
   },
   {
     title: 'Hauswirtschaft',
     description: 'Umfassende hauswirtschaftliche Dienstleistungen für Ihr Wohlbefinden.',
-    icon: '🏠',
-    color: 'from-primary to-accent',
+    image: '/assets/images/services/haushalts_reinigung.png',
     link: '/hauswirtschaft'
   },
   {
     title: 'Fensterreinigung',
     description: 'Streifenfreie Glasreinigung für kristallklare Durchsicht und perfekten Glanz.',
-    icon: '🪟',
-    color: 'from-secondary to-primary',
+    image: '/assets/images/services/fensterreinigung.png',
     link: '/fensterreinigung'
   },
   {
     title: 'Winterdienst',
     description: 'Zuverlässiger Schneeräum- und Streudienst für sichere Wege und Zufahrten.',
-    icon: '❄️',
-    color: 'from-accent to-primary',
+    image: '/assets/images/services/winterdienst.png',
     link: '/winterdienst'
   }
 ];
@@ -65,29 +59,35 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+              to={service.link || "#contact"}
+              className="group relative rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 h-80"
             >
-              <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
-              <div className="p-8">
-                <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{ 
+                  backgroundImage: `url(${import.meta.env.BASE_URL}${service.image.replace(/^\//, '')})` 
+                }}
+              />
+              
+              {/* Gradient Overlay for Text Readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-8">
+                <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-white/90 leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <Link
-                  to={service.link || "#contact"}
-                  className="inline-flex items-center gap-1 text-primary hover:text-secondary font-semibold transition mt-4"
-                >
+                <span className="inline-flex items-center gap-1 text-accent hover:text-white font-semibold transition">
                   Mehr erfahren →
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

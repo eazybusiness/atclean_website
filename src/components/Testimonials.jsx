@@ -29,7 +29,7 @@ const testimonials = [
     company: 'Landkreis Celle',
     logo: '/assets/logos/04_logo_kunde_landkreis_celle_niedersachsen.png',
     text: 'Seit Jahren kümmert sich A-Team Clean um unsere Einrichtungen. Die Zusammenarbeit ist unkompliziert und das Ergebnis überzeugt uns täglich.',
-    author: 'Facility Management',
+    author: 'Verwaltung',
     position: 'Landkreis Celle',
     rating: 5
   },
@@ -123,9 +123,14 @@ export default function Testimonials() {
     setIsAutoPlaying(false);
   };
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Referenzen

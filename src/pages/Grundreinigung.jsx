@@ -1,11 +1,20 @@
+import ServiceNav from '../components/ServiceNav';
+
 export default function Grundreinigung() {
   return (
     <div className="min-h-screen bg-white pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Grundreinigung</h1>
-          <p className="text-xl md:text-2xl max-w-3xl">
+      <ServiceNav />
+      
+      {/* Hero Section with Background Image */}
+      <section className="relative h-96 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/images/services/grundreinigung.png)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">Grundreinigung</h1>
+          <p className="text-xl md:text-2xl max-w-3xl text-white">
             Professionelle Grundreinigung in Südheide, Celle und Hannover für Privat & Gewerbe. 
             A-Team Clean steht für gründliche, zuverlässige Reinigung.
           </p>
