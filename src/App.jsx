@@ -11,6 +11,7 @@ import Hauswirtschaft from './pages/Hauswirtschaft'
 import Fensterreinigung from './pages/Fensterreinigung'
 import Winterdienst from './pages/Winterdienst'
 import FAQ from './pages/FAQ'
+import Karriere from './pages/Karriere'
 import Datenschutz from './pages/Datenschutz'
 import Impressum from './pages/Impressum'
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/hauswirtschaft" element={<Hauswirtschaft />} />
           <Route path="/fensterreinigung" element={<Fensterreinigung />} />
           <Route path="/winterdienst" element={<Winterdienst />} />
+          <Route path="/karriere" element={<Karriere />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/impressum" element={<Impressum />} />

@@ -76,7 +76,7 @@ export default function Navbar() {
                   </svg>
                 </button>
                 {isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+                  <div className="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
                     {services.map((service) => (
                       <Link
                         key={service.path}
@@ -89,6 +89,10 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
+
+              <Link to="/karriere" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                Karriere
+              </Link>
 
               {isHomePage ? (
                 <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
@@ -164,6 +168,10 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link to="/karriere" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
+              Karriere
+            </Link>
 
             {isHomePage ? (
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left">
