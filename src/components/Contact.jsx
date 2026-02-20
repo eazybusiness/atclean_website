@@ -215,7 +215,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary to-blue-700 text-white rounded-lg p-8">
+            <div className="bg-gradient-to-br from-accent to-cyan-400 text-white rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Sprechzeiten</h3>
               <p className="text-lg mb-2">
                 <strong>08:00 - 17:00 Uhr</strong>

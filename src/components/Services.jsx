@@ -92,11 +92,11 @@ export default function Services() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary to-blue-700 text-white rounded-2xl p-8 md:p-12 shadow-xl">
+          <div className="bg-gradient-to-r from-accent to-cyan-400 text-white rounded-2xl p-8 md:p-12 shadow-xl">
             <h3 className="text-3xl font-bold mb-4">
               Individuelle Lösungen für Ihr Unternehmen
             </h3>
-            <p className="text-lg mb-6 text-blue-100 max-w-2xl mx-auto">
+            <p className="text-lg mb-6 text-cyan-50 max-w-2xl mx-auto">
               Benötigen Sie eine maßgeschneiderte Reinigungslösung? Wir erstellen gemeinsam mit Ihnen einen individuellen Reinigungsplan.
             </p>
             <button
