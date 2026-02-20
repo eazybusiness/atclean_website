@@ -27,12 +27,12 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex-shrink-0 flex items-center gap-3 group">
             <img 
               src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
               alt="A-Team Gebäudereinigung Logo" 
-              className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextElementSibling.style.display = 'flex';
@@ -43,7 +43,7 @@ export default function Navbar() {
                 AT
               </div>
             </div>
-            <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               A-Team Gebäudereinigung
             </h1>
           </Link>
@@ -95,15 +95,15 @@ export default function Navbar() {
               </Link>
 
               {isHomePage ? (
-                <button onClick={() => scrollToSection('contact')} className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
                   Kontakt
                 </button>
               ) : (
-                <Link to="/#contact" className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                <Link to="/#contact" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
                   Kontakt
                 </Link>
               )}
-              <a href="tel:+4917687968242" className="text-primary hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition">
+              <a href="tel:+4917687968242" className="bg-blue-100 text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
                 📞 +49 176 87968242
               </a>
             </div>
