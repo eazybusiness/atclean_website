@@ -107,6 +107,11 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Replace Hero video with hero.png static image (2026-02-20)
 ✓ Update Hero text to 'Ihr zuverlässiger Partner für professionelle Gebäudereinigung' (2026-02-20)
 ✓ Remove phone number button from Hero section (2026-02-20)
+✓ Remove 'Professionelle Gebäudereinigung' badge from Hero (2026-02-20)
+✓ Change 3 info boxes in About section from dark blue to turquoise (#3bc8e8) (2026-02-20)
+✓ Replace Testimonials with new References component (2026-02-20)
+✓ Create bidirectional logo sliders for references (like beban-clean.de) (2026-02-20)
+✓ Add 22 customer reference logos with auto-scroll animation (2026-02-20)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
