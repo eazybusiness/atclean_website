@@ -1,56 +1,47 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Karriere() {
+  useEffect(() => {
+    document.title = 'Reinigungskraft (m/w/d) Celle & Hannover – Minijob, Teilzeit, Vollzeit | A-Team Clean';
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Jetzt als Reinigungskraft (m/w/d) in Celle oder Hannover bewerben. Minijob, Teilzeit oder Vollzeit in der Gebäudereinigung. Feste Arbeitszeiten Mo–Fr.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Jetzt als Reinigungskraft (m/w/d) in Celle oder Hannover bewerben. Minijob, Teilzeit oder Vollzeit in der Gebäudereinigung. Feste Arbeitszeiten Mo–Fr.';
+      document.head.appendChild(meta);
+    }
+  }, []);
   const jobOpenings = [
     {
-      title: 'Reinigungskraft (m/w/d)',
-      type: 'Vollzeit / Teilzeit',
-      location: 'Celle, Südheide & Hannover',
+      title: 'Reinigungskraft (m/w/d) in Celle & Hannover',
+      type: 'Minijob, Teilzeit oder Vollzeit',
+      location: 'Celle & Hannover',
+      schedule: 'Montag bis Freitag',
+      description: 'Wir sind ein etabliertes Unternehmen im Bereich Gebäudereinigung und suchen ab sofort zuverlässige Mitarbeiter (m/w/d) für den Einsatz in Bürogebäuden, Praxen, Treppenhäusern und Gewerbeobjekten. Egal ob Minijob, Teilzeit oder Vollzeit – wir bieten dir eine sichere Anstellung mit festen Arbeitszeiten von Montag bis Freitag.',
       tasks: [
-        'Professionelle Unterhalts- und Grundreinigung',
-        'Reinigung von Büros, Praxen und Gewerbeflächen',
-        'Sorgfältiger Umgang mit Reinigungsgeräten und -mitteln',
-        'Eigenverantwortliches Arbeiten nach Reinigungsplan'
+        'Unterhaltsreinigung von Büros und Gewerbeflächen',
+        'Treppenhausreinigung',
+        'Reinigung von Sanitäranlagen',
+        'Glas- und Fensterreinigung',
+        'Einhaltung von Hygiene- und Qualitätsstandards'
       ],
       profile: [
-        'Zuverlässigkeit und Sorgfalt',
-        'Freundliches Auftreten',
-        'Erfahrung in der Gebäudereinigung von Vorteil',
-        'Deutschkenntnisse von Vorteil'
-      ]
-    },
-    {
-      title: 'Fensterreiniger (m/w/d)',
-      type: 'Vollzeit / Teilzeit',
-      location: 'Celle, Südheide & Hannover',
-      tasks: [
-        'Streifenfreie Reinigung von Fenstern und Glasflächen',
-        'Reinigung von Schaufenstern und Glasfassaden',
-        'Einsatz bei Privat- und Gewerbekunden',
-        'Pflege und Wartung der Arbeitsgeräte'
+        'Erfahrung in der Gebäudereinigung von Vorteil (keine Voraussetzung)',
+        'Zuverlässigkeit und sorgfältige Arbeitsweise',
+        'Deutschkenntnisse von Vorteil',
+        'Führerschein Klasse B wünschenswert'
       ],
-      profile: [
-        'Erfahrung in der Fensterreinigung wünschenswert',
-        'Schwindelfrei und körperlich fit',
-        'Führerschein Klasse B von Vorteil',
-        'Teamfähigkeit und Zuverlässigkeit'
-      ]
-    },
-    {
-      title: 'Hauswirtschafter (m/w/d)',
-      type: 'Vollzeit / Teilzeit',
-      location: 'Celle, Südheide & Hannover',
-      tasks: [
-        'Hauswirtschaftliche Versorgung in Privathaushalten',
-        'Wäschepflege und Bügelservice',
-        'Einkaufsservice und Mahlzeitenzubereitung',
-        'Betreuung und Unterstützung im Alltag'
-      ],
-      profile: [
-        'Erfahrung in der Hauswirtschaft',
-        'Einfühlungsvermögen und Geduld',
-        'Diskretion und Vertrauenswürdigkeit',
-        'Selbstständige Arbeitsweise'
+      benefits: [
+        'Sicherer Arbeitsplatz in der Gebäudereinigung in Celle & Hannover',
+        'Feste Arbeitszeiten (Mo–Fr)',
+        'Minijob, Teilzeit oder Vollzeit möglich',
+        'Faire und pünktliche Bezahlung',
+        'Langfristige Zusammenarbeit',
+        'Angenehmes Team und strukturierte Einarbeitung'
       ]
     }
   ];
@@ -98,7 +89,7 @@ export default function Karriere() {
               Karriere bei A-Team Clean
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
-              Werde Teil unseres engagierten Teams – Zuverlässigkeit, Fairness und Zukunftssicherheit
+              Du suchst einen Job als Reinigungskraft in Celle oder Hannover? Wir bieten Minijob, Teilzeit oder Vollzeit mit festen Arbeitszeiten Mo–Fr.
             </p>
             <a 
               href="#bewerbung" 
@@ -147,10 +138,10 @@ export default function Karriere() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Aktuelle Stellenangebote
+              Jetzt bewerben – Reinigungskraft Job in Celle oder Hannover
             </h2>
             <p className="text-xl text-gray-600">
-              Finde die passende Position für deine Fähigkeiten und Interessen
+              Ab sofort: Minijob, Teilzeit oder Vollzeit mit festen Arbeitszeiten (Mo–Fr)
             </p>
           </div>
 
@@ -165,24 +156,33 @@ export default function Karriere() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {job.title}
                     </h3>
-                    <div className="flex flex-wrap gap-3 text-sm">
+                    <div className="flex flex-wrap gap-3 text-sm mb-4">
                       <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
                         {job.type}
                       </span>
                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
                         📍 {job.location}
                       </span>
+                      <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
+                        📅 {job.schedule}
+                      </span>
                     </div>
                   </div>
                   <a 
                     href="#bewerbung"
-                    className="mt-4 md:mt-0 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block text-center"
+                    className="mt-4 md:mt-0 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block text-center whitespace-nowrap"
                   >
                     Jetzt bewerben
                   </a>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                {job.description && (
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    {job.description}
+                  </p>
+                )}
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="font-bold text-gray-900 mb-3">Deine Aufgaben:</h4>
                     <ul className="space-y-2">
@@ -206,6 +206,20 @@ export default function Karriere() {
                     </ul>
                   </div>
                 </div>
+
+                {job.benefits && (
+                  <div className="border-t pt-6">
+                    <h4 className="font-bold text-gray-900 mb-3">Das bieten wir dir:</h4>
+                    <ul className="grid md:grid-cols-2 gap-2">
+                      {job.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-gray-700">
+                          <span className="text-green-600 mt-1">✔️</span>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             ))}
           </div>
