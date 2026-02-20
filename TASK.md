@@ -102,6 +102,11 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Update Karriere page with real job posting from customer (2026-02-20)
 ✓ Replace 3 fictional jobs with actual "Reinigungskraft (m/w/d)" position (2026-02-20)
 ✓ Add SEO meta tags for Karriere page (title and description) (2026-02-20)
+✓ Update Navbar: increase height (h-20), larger logo (h-16) and text (text-2xl/3xl) (2026-02-20)
+✓ Update Navbar: remove Kontakt button background, add light blue bg to phone number (2026-02-20)
+✓ Replace Hero video with hero.png static image (2026-02-20)
+✓ Update Hero text to 'Ihr zuverlässiger Partner für professionelle Gebäudereinigung' (2026-02-20)
+✓ Remove phone number button from Hero section (2026-02-20)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
