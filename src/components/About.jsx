@@ -78,7 +78,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-primary via-blue-600 to-primary text-white rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-r from-accent via-cyan-400 to-accent text-white rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
           
@@ -86,7 +86,7 @@ export default function About() {
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Umfassende Reinigungslösungen
             </h3>
-            <p className="text-lg md:text-xl mb-8 text-blue-100 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 text-cyan-50 max-w-3xl leading-relaxed">
               Wir kümmern uns um alle Aspekte der Gebäudereinigung, einschließlich der Reinigung von Böden, Teppichen, Fenstern, Sanitäranlagen und Küchen. Darüber hinaus bieten wir auch Sonderreinigungen wie die Entfernung von Graffiti oder die Reinigung nach Renovierungsarbeiten an.
             </p>
             
@@ -97,27 +97,27 @@ export default function About() {
                 </svg>
                 <div>
                   <p className="font-semibold mb-1">Umweltfreundlich</p>
-                  <p className="text-sm text-blue-100">Nachhaltige Reinigungsmittel</p>
+                  <p className="text-sm text-cyan-50">Nachhaltige Reinigungsmittel</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <div>
                   <p className="font-semibold mb-1">Flexibel</p>
-                  <p className="text-sm text-blue-100">Angepasst an Ihre Zeiten</p>
+                  <p className="text-sm text-cyan-50">Angepasst an Ihre Zeiten</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <div>
                   <p className="font-semibold mb-1">Zuverlässig</p>
-                  <p className="text-sm text-blue-100">Pünktlich und professionell</p>
+                  <p className="text-sm text-cyan-50">Pünktlich und professionell</p>
                 </div>
               </div>
             </div>

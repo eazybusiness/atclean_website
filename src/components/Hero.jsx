@@ -17,12 +17,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
-        <div className="mb-6 inline-block">
-          <span className="bg-accent/90 text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider shadow-lg">
-            Professionelle Gebäudereinigung
-          </span>
-        </div>
-        
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
           Ihr zuverlässiger Partner für professionelle Gebäudereinigung
         </h1>
