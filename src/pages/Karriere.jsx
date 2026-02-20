@@ -91,12 +91,6 @@ export default function Karriere() {
             <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8">
               Du suchst einen Job als Reinigungskraft in Celle oder Hannover? Wir bieten Minijob, Teilzeit oder Vollzeit mit festen Arbeitszeiten Mo–Fr.
             </p>
-            <a 
-              href="#bewerbung" 
-              className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition shadow-lg"
-            >
-              Jetzt bewerben
-            </a>
           </div>
         </div>
       </section>
@@ -138,7 +132,7 @@ export default function Karriere() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Jetzt bewerben – Reinigungskraft Job in Celle oder Hannover
+              Reinigungskraft Job in Celle oder Hannover
             </h2>
             <p className="text-xl text-gray-600">
               Ab sofort: Minijob, Teilzeit oder Vollzeit mit festen Arbeitszeiten (Mo–Fr)
@@ -269,8 +263,8 @@ export default function Karriere() {
                 <div className="space-y-2 text-gray-700">
                   <p className="flex items-center gap-2">
                     <span className="text-primary">📧</span>
-                    <a href="mailto:bewerbung@atclean.de" className="text-primary hover:underline font-medium">
-                      bewerbung@atclean.de
+                    <a href="mailto:info@atclean.de" className="text-primary hover:underline font-medium">
+                      info@atclean.de
                     </a>
                   </p>
                   <p className="flex items-center gap-2">

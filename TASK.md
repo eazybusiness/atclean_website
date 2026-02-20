@@ -112,6 +112,7 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Replace Testimonials with new References component (2026-02-20)
 ✓ Create bidirectional logo sliders for references (like beban-clean.de) (2026-02-20)
 ✓ Add 22 customer reference logos with auto-scroll animation (2026-02-20)
+✓ Apply turquoise color to 'Individuelle Lösungen' and 'Sprechzeiten' boxes (2026-02-20)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
