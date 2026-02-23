@@ -18,7 +18,8 @@ export default function Hero() {
       
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
         <h1 className="text-2xl sm:text-3xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
-          Ihr zuverlässiger Partner für professionelle Gebäudereinigung
+          <span className="block sm:inline">Ihr zuverlässiger Partner für professionelle</span>{" "}
+          <span className="block sm:inline">Gebäudereinigung</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-10 text-balance max-w-3xl mx-auto text-gray-100 leading-relaxed">
