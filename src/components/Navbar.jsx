@@ -32,7 +32,7 @@ export default function Navbar() {
             <img 
               src={`${import.meta.env.BASE_URL}assets/atclean-logo.png`}
               alt="A-Team Gebäudereinigung Logo" 
-              className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-10 sm:h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextElementSibling.style.display = 'flex';
@@ -43,7 +43,7 @@ export default function Navbar() {
                 AT
               </div>
             </div>
-            <h1 className="text-lg sm:text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-sm sm:text-lg md:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               A-Team Gebäudereinigung
             </h1>
           </Link>

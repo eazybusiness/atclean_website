@@ -106,11 +106,11 @@ export default function References() {
         }
 
         .animate-scroll-rtl {
-          animation: scroll-rtl 60s linear infinite;
+          animation: scroll-rtl 30s linear infinite;
         }
 
         .animate-scroll-ltr {
-          animation: scroll-ltr 60s linear infinite;
+          animation: scroll-ltr 30s linear infinite;
         }
 
         .animate-scroll-rtl:hover,

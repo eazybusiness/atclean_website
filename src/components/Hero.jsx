@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
-        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
+        <h1 className="text-2xl sm:text-3xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
           Ihr zuverlässiger Partner für professionelle Gebäudereinigung
         </h1>
         
@@ -37,21 +37,21 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mt-12 flex justify-center gap-8 text-sm text-gray-200">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+        <div className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-200">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span>Zertifiziert</span>
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span>Versichert</span>
           </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span>Erfahren</span>
