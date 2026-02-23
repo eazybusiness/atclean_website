@@ -114,6 +114,12 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Add 22 customer reference logos with auto-scroll animation (2026-02-20)
 ✓ Apply turquoise color to 'Individuelle Lösungen' and 'Sprechzeiten' boxes (2026-02-20)
 ✓ Karriere: change application email to info@atclean.de and remove header CTA (2026-02-20)
+✓ Mobile navbar: reduce 'A-Team Gebäudereinigung' text size for better mobile display (2026-02-23)
+✓ Hero: update button text to 'Jetzt kostenloses Angebot anfordern' (2026-02-23)
+✓ Hero: reduce heading text size for mobile responsiveness (2026-02-23)
+✓ Hero: replace background image with new hero.jpg (2026-02-23)
+✓ References: split logos into two halves (11 each) - no duplicates across sliders (2026-02-23)
+✓ References: remove grayscale filter - logos now display in full color (2026-02-23)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
