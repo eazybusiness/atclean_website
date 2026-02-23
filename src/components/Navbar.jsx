@@ -50,15 +50,15 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+              <Link to="/" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                 Startseite
               </Link>
               {isHomePage ? (
-                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                   Über uns
                 </button>
               ) : (
-                <Link to="/#about" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                <Link to="/#about" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                   Über uns
                 </Link>
               )}
@@ -69,7 +69,7 @@ export default function Navbar() {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <button className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition flex items-center gap-1">
+                <button className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition flex items-center gap-1">
                   Leistungen
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -90,16 +90,16 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link to="/karriere" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+              <Link to="/karriere" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                 Karriere
               </Link>
 
               {isHomePage ? (
-                <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                   Kontakt
                 </button>
               ) : (
-                <Link to="/#contact" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition">
+                <Link to="/#contact" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-bold transition">
                   Kontakt
                 </Link>
               )}
