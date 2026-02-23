@@ -11,13 +11,13 @@ export default function Hero() {
       {/* Background Image */}
       <div 
         className="absolute w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/images/hero.png)` }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/images/hero.jpg)` }}
       />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
           Ihr zuverlässiger Partner für professionelle Gebäudereinigung
         </h1>
         
@@ -30,7 +30,7 @@ export default function Hero() {
             onClick={scrollToContact}
             className="group bg-accent hover:bg-green-600 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
           >
-            Jetzt Kontakt aufnehmen
+            Jetzt kostenloses Angebot anfordern
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

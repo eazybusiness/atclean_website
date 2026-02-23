@@ -24,8 +24,14 @@ export default function References() {
     'Zetcon.png'
   ];
 
-  // Duplicate logos for seamless infinite scroll
-  const duplicatedLogos = [...logos, ...logos];
+  // Split logos into two halves
+  const midpoint = Math.ceil(logos.length / 2);
+  const firstHalf = logos.slice(0, midpoint);
+  const secondHalf = logos.slice(midpoint);
+
+  // Duplicate each half for seamless infinite scroll
+  const duplicatedFirstHalf = [...firstHalf, ...firstHalf];
+  const duplicatedSecondHalf = [...secondHalf, ...secondHalf];
 
   return (
     <section className="py-16 bg-gray-50">
@@ -39,10 +45,10 @@ export default function References() {
           </p>
         </div>
 
-        {/* First slider - Right to Left */}
+        {/* First slider - Right to Left (First Half) */}
         <div className="relative overflow-hidden mb-8">
           <div className="flex animate-scroll-rtl">
-            {duplicatedLogos.map((logo, index) => (
+            {duplicatedFirstHalf.map((logo, index) => (
               <div
                 key={`rtl-${index}`}
                 className="flex-shrink-0 mx-8 flex items-center justify-center"
@@ -51,7 +57,7 @@ export default function References() {
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
                   alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full object-contain transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -59,10 +65,10 @@ export default function References() {
           </div>
         </div>
 
-        {/* Second slider - Left to Right */}
+        {/* Second slider - Left to Right (Second Half) */}
         <div className="relative overflow-hidden">
           <div className="flex animate-scroll-ltr">
-            {duplicatedLogos.map((logo, index) => (
+            {duplicatedSecondHalf.map((logo, index) => (
               <div
                 key={`ltr-${index}`}
                 className="flex-shrink-0 mx-8 flex items-center justify-center"
@@ -71,7 +77,7 @@ export default function References() {
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
                   alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full object-contain transition-all duration-300"
                   loading="lazy"
                 />
               </div>
