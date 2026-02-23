@@ -124,6 +124,7 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Further Hero heading optimization: reduce to text-2xl on mobile to prevent cutoff (2026-02-23)
 ✓ Hero badges optimization: smaller text, reduced gaps, flex-wrap for better mobile display (2026-02-23)
 ✓ References: increase slider speed from 60s to 30s (2x faster) (2026-02-23)
+✓ Hero: add manual line break in heading for medium/large screens (2026-02-23)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
