@@ -126,6 +126,9 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ References: increase slider speed from 60s to 30s (2x faster) (2026-02-23)
 ✓ Hero: add manual line break in heading for medium/large screens (2026-02-23)
 ✓ Navbar: make menu items bold (Startseite, Über uns, Leistungen, Karriere, Kontakt) (2026-02-23)
+✓ Hero: update heading text to 'Ihr Partner für professionelle Gebäudereinigung' (2026-02-24)
+✓ Hero: increase mobile heading size (text-2xl → text-3xl) since text is shorter (2026-02-24)
+✓ Hero: make subtext much smaller on mobile (text-xl → text-sm) (2026-02-24)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓
