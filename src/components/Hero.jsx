@@ -17,12 +17,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto animate-fade-in">
-        <h1 className="text-2xl sm:text-3xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
-          <span className="block sm:inline">Ihr zuverlässiger Partner für professionelle</span>{" "}
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-balance leading-tight drop-shadow-2xl">
+          <span className="block sm:inline">Ihr Partner für professionelle</span>{" "}
           <span className="block sm:inline">Gebäudereinigung</span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-10 text-balance max-w-3xl mx-auto text-gray-100 leading-relaxed">
+        <p className="text-sm md:text-2xl mb-10 text-balance max-w-3xl mx-auto text-gray-100 leading-relaxed">
           Professionelle Reinigungslösungen in Südheide, Fassberg, Eschede, Celle, Burgdorf, Lehrte, Hannover und Umgebung
         </p>
         
