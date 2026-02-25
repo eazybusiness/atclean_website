@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image */}
       <div 
         className="absolute w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/images/hero.jpg)` }}
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/images/fensterputzer.png)` }}
       />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
