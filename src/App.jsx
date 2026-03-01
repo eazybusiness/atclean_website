@@ -17,7 +17,7 @@ import Impressum from './pages/Impressum'
 
 function App() {
   return (
-    <Router basename="/atclean_website">
+    <Router>
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
