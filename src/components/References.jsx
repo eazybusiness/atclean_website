@@ -29,9 +29,9 @@ export default function References() {
   const firstHalf = logos.slice(0, midpoint);
   const secondHalf = logos.slice(midpoint);
 
-  // Duplicate each half multiple times for seamless infinite scroll (especially on mobile)
-  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf, ...firstHalf];
-  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf];
+  // Duplicate each half 3 times for seamless infinite scroll
+  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf];
+  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
     <section className="py-16 bg-gray-50">
@@ -51,8 +51,8 @@ export default function References() {
             {duplicatedFirstHalf.map((logo, index) => (
               <div
                 key={`rtl-${index}`}
-                className="flex-shrink-0 mx-4 sm:mx-8 flex items-center justify-center"
-                style={{ width: '120px', height: '60px' }}
+                className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center"
+                style={{ width: '150px', height: '70px' }}
               >
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
@@ -71,8 +71,8 @@ export default function References() {
             {duplicatedSecondHalf.map((logo, index) => (
               <div
                 key={`ltr-${index}`}
-                className="flex-shrink-0 mx-4 sm:mx-8 flex items-center justify-center"
-                style={{ width: '120px', height: '60px' }}
+                className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center"
+                style={{ width: '150px', height: '70px' }}
               >
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
@@ -92,13 +92,13 @@ export default function References() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-25%);
+            transform: translateX(-33.333%);
           }
         }
 
         @keyframes scroll-ltr {
           0% {
-            transform: translateX(-25%);
+            transform: translateX(-33.333%);
           }
           100% {
             transform: translateX(0);
@@ -106,11 +106,11 @@ export default function References() {
         }
 
         .animate-scroll-rtl {
-          animation: scroll-rtl 20s linear infinite;
+          animation: scroll-rtl 15s linear infinite;
         }
 
         .animate-scroll-ltr {
-          animation: scroll-ltr 20s linear infinite;
+          animation: scroll-ltr 15s linear infinite;
         }
 
         .animate-scroll-rtl:hover,
