@@ -29,9 +29,9 @@ export default function References() {
   const firstHalf = logos.slice(0, midpoint);
   const secondHalf = logos.slice(midpoint);
 
-  // Duplicate each half 3 times for seamless infinite scroll
-  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf];
-  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf];
+  // Duplicate logos multiple times for true infinite scroll
+  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf, ...firstHalf];
+  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
     <section className="py-16 bg-gray-50">
@@ -47,17 +47,17 @@ export default function References() {
 
         {/* First slider - Right to Left (First Half) */}
         <div className="relative overflow-hidden mb-8">
-          <div className="flex animate-scroll-rtl">
+          <div className="flex animate-scroll-rtl whitespace-nowrap">
             {duplicatedFirstHalf.map((logo, index) => (
               <div
                 key={`rtl-${index}`}
-                className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center"
-                style={{ width: '150px', height: '70px' }}
+                className="inline-flex flex-shrink-0 mx-4 md:mx-6 items-center justify-center"
+                style={{ width: '140px', height: '70px' }}
               >
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
                   alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain transition-all duration-300"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
               </div>
@@ -67,17 +67,17 @@ export default function References() {
 
         {/* Second slider - Left to Right (Second Half) */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-ltr">
+          <div className="flex animate-scroll-ltr whitespace-nowrap">
             {duplicatedSecondHalf.map((logo, index) => (
               <div
                 key={`ltr-${index}`}
-                className="flex-shrink-0 mx-6 sm:mx-8 flex items-center justify-center"
-                style={{ width: '150px', height: '70px' }}
+                className="inline-flex flex-shrink-0 mx-4 md:mx-6 items-center justify-center"
+                style={{ width: '140px', height: '70px' }}
               >
                 <img
                   src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
                   alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain transition-all duration-300"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
               </div>
@@ -92,25 +92,37 @@ export default function References() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-33.333%);
+            transform: translateX(-50%);
           }
         }
 
         @keyframes scroll-ltr {
           0% {
-            transform: translateX(-33.333%);
+            transform: translateX(-50%);
           }
           100% {
             transform: translateX(0);
           }
         }
 
+        /* Fast animation for mobile */
         .animate-scroll-rtl {
-          animation: scroll-rtl 15s linear infinite;
+          animation: scroll-rtl 20s linear infinite;
         }
 
         .animate-scroll-ltr {
-          animation: scroll-ltr 15s linear infinite;
+          animation: scroll-ltr 20s linear infinite;
+        }
+
+        /* Slower animation for desktop */
+        @media (min-width: 768px) {
+          .animate-scroll-rtl {
+            animation: scroll-rtl 40s linear infinite;
+          }
+
+          .animate-scroll-ltr {
+            animation: scroll-ltr 40s linear infinite;
+          }
         }
 
         .animate-scroll-rtl:hover,
