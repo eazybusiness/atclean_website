@@ -130,6 +130,7 @@ is this usefull content for the website? it has been taken off the old website. 
 ✓ Hero: increase mobile heading size (text-2xl → text-3xl) since text is shorter (2026-02-24)
 ✓ Hero: make subtext much smaller on mobile (text-xl → text-sm) (2026-02-24)
 ✓ Hero: replace background image with fensterputzer.png (2026-02-25)
+✓ References: complete rewrite of slider using requestAnimationFrame — constant 65px/s speed on all screen sizes, seamless infinite loop, no CSS percentage hacks (2026-03-03)
 
 ## Discovered During Work
 - Video file already provided: video_header.mp4 ✓

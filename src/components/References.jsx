@@ -1,3 +1,132 @@
+import { useEffect, useRef } from 'react';
+
+// Fixed dimensions for every logo slot — same on all screen sizes
+const LOGO_WIDTH = 150;   // px — visible logo container width
+const LOGO_MARGIN = 20;   // px — each side (total gap between logos = 40px)
+const LOGO_SLOT = LOGO_WIDTH + LOGO_MARGIN * 2; // 190px per slot
+const SPEED = 65;         // px/second — constant on every device
+const COPIES = 6;         // repetitions of the logo list for seamless loop
+
+/**
+ * A single auto-scrolling logo track.
+ * Uses requestAnimationFrame so speed is always constant in px/s,
+ * regardless of screen width, device pixel ratio or animation frame budget.
+ *
+ * @param {string[]} logos - list of logo filenames
+ * @param {'rtl'|'ltr'} direction - scroll direction
+ */
+function LogoTrack({ logos, direction }) {
+  const trackRef  = useRef(null);
+  const posRef    = useRef(0);
+  const rafRef    = useRef(null);
+  const lastTsRef = useRef(null);
+  const pausedRef = useRef(false);
+
+  // The pixel distance that equals exactly one full copy of the logo list
+  const singleCopyWidth = logos.length * LOGO_SLOT;
+
+  // Render COPIES identical sets so the strip is always longer than any viewport
+  const repeatedLogos = Array.from({ length: COPIES }, () => logos).flat();
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    // RTL starts at 0 and moves left.
+    // LTR starts at -singleCopyWidth (showing copy #2) and moves right.
+    const initPos = direction === 'ltr' ? -singleCopyWidth : 0;
+    posRef.current = initPos;
+    track.style.transform = `translateX(${initPos}px)`;
+    lastTsRef.current = null;
+
+    const animate = (timestamp) => {
+      // On the very first frame just record the timestamp and continue
+      if (lastTsRef.current === null) {
+        lastTsRef.current = timestamp;
+        rafRef.current = requestAnimationFrame(animate);
+        return;
+      }
+
+      if (!pausedRef.current) {
+        // Cap dt to 50 ms so a hidden-tab resume doesn't cause a visible jump
+        const dt = Math.min((timestamp - lastTsRef.current) / 1000, 0.05);
+
+        if (direction === 'rtl') {
+          posRef.current -= SPEED * dt;
+          // Once we've scrolled one full copy to the left, jump back seamlessly
+          if (posRef.current <= -singleCopyWidth) {
+            posRef.current += singleCopyWidth;
+          }
+        } else {
+          posRef.current += SPEED * dt;
+          // Once we've scrolled one full copy to the right, jump back seamlessly
+          if (posRef.current >= 0) {
+            posRef.current -= singleCopyWidth;
+          }
+        }
+
+        track.style.transform = `translateX(${posRef.current}px)`;
+      }
+
+      lastTsRef.current = timestamp;
+      rafRef.current = requestAnimationFrame(animate);
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      lastTsRef.current = null;
+    };
+  }, [direction, singleCopyWidth]);
+
+  const basePath = `${import.meta.env.BASE_URL}assets/images/referenzen/`;
+
+  return (
+    <div
+      className="overflow-hidden mb-6 select-none"
+      onMouseEnter={() => { pausedRef.current = true; }}
+      onMouseLeave={() => {
+        pausedRef.current = false;
+        // Reset timestamp so there's no jump after the pause
+        lastTsRef.current = null;
+      }}
+    >
+      <div
+        ref={trackRef}
+        style={{
+          display: 'flex',
+          width: 'max-content',
+          willChange: 'transform',
+        }}
+      >
+        {repeatedLogos.map((logo, index) => (
+          <div
+            key={index}
+            style={{
+              width: `${LOGO_WIDTH}px`,
+              height: '72px',
+              margin: `0 ${LOGO_MARGIN}px`,
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img
+              src={`${basePath}${logo}`}
+              alt={logo.replace(/\.[^/.]+$/, '').replace(/[._-]/g, ' ')}
+              style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+              loading="lazy"
+              draggable={false}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function References() {
   const logos = [
     'Abbruch-Landwehr.png',
@@ -21,115 +150,28 @@ export default function References() {
     'Ostbau.png',
     'SV Business Catering.png',
     'Staatliches Baumanagement Region Nord-West.png',
-    'Zetcon.png'
+    'Zetcon.png',
   ];
 
-  // Split logos into two halves
   const midpoint = Math.ceil(logos.length / 2);
-  const firstHalf = logos.slice(0, midpoint);
+  const firstHalf  = logos.slice(0, midpoint);
   const secondHalf = logos.slice(midpoint);
-
-  // Duplicate logos multiple times for true infinite scroll
-  const duplicatedFirstHalf = [...firstHalf, ...firstHalf, ...firstHalf, ...firstHalf];
-  const duplicatedSecondHalf = [...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf];
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Unsere Referenzen
-          </h2>
-          <p className="text-xl text-gray-600">
-            Vertrauen von führenden Unternehmen und Institutionen
-          </p>
-        </div>
-
-        {/* First slider - Right to Left (First Half) */}
-        <div className="relative overflow-hidden mb-8">
-          <div className="flex animate-scroll-rtl whitespace-nowrap">
-            {duplicatedFirstHalf.map((logo, index) => (
-              <div
-                key={`rtl-${index}`}
-                className="inline-flex flex-shrink-0 mx-4 md:mx-6 items-center justify-center"
-                style={{ width: '140px', height: '70px' }}
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
-                  alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Second slider - Left to Right (Second Half) */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-ltr whitespace-nowrap">
-            {duplicatedSecondHalf.map((logo, index) => (
-              <div
-                key={`ltr-${index}`}
-                className="inline-flex flex-shrink-0 mx-4 md:mx-6 items-center justify-center"
-                style={{ width: '140px', height: '70px' }}
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}assets/images/referenzen/${logo}`}
-                  alt={`Referenz ${index + 1}`}
-                  className="max-h-full max-w-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Header — constrained to readable width */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Unsere Referenzen
+        </h2>
+        <p className="text-xl text-gray-600">
+          Vertrauen von führenden Unternehmen und Institutionen
+        </p>
       </div>
 
-      <style>{`
-        @keyframes scroll-rtl {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes scroll-ltr {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        /* Fast animation for mobile */
-        .animate-scroll-rtl {
-          animation: scroll-rtl 20s linear infinite;
-        }
-
-        .animate-scroll-ltr {
-          animation: scroll-ltr 20s linear infinite;
-        }
-
-        /* Slower animation for desktop */
-        @media (min-width: 768px) {
-          .animate-scroll-rtl {
-            animation: scroll-rtl 40s linear infinite;
-          }
-
-          .animate-scroll-ltr {
-            animation: scroll-ltr 40s linear infinite;
-          }
-        }
-
-        .animate-scroll-rtl:hover,
-        .animate-scroll-ltr:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
+      {/* Sliders are full-width — no max-w wrapper */}
+      <LogoTrack logos={firstHalf}  direction="rtl" />
+      <LogoTrack logos={secondHalf} direction="ltr" />
     </section>
   );
 }
