@@ -61,8 +61,8 @@ export default function About() {
 
         {/* Liftkontor Zertifizierung */}
         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12 mb-16 border border-gray-200">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div>
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src={`${import.meta.env.BASE_URL}assets/images/Liftkontor.png`}
@@ -78,35 +78,76 @@ export default function About() {
                 Damit können wir auch hochliegenden Fensterfronten und schwer zugängliche Bereiche professionell 
                 und sicher reinigen.
               </p>
-              <div className="flex items-center gap-3">
-                <img 
-                  src={`${import.meta.env.BASE_URL}assets/images/lizensierte_lifts.png`}
-                  alt="Scherenarbeitsbühnen, Gelenkteleskop-Arbeitsbühnen, Teleskop-Arbeitsbühnen, Spezial- und Raupenarbeitsbühnen, Senkrechtlifte"
-                  className="h-16 object-contain"
-                />
-                <div>
-                  <p className="font-semibold text-gray-900">Prüfung erfolgreich abgeschlossen</p>
-                  <p className="text-sm text-gray-600">Zertifizierte Lift-Bedienung für Höhenarbeiten</p>
+              <div className="mb-4">
+                <p className="font-semibold text-gray-900 mb-3">Prüfung erfolgreich abgeschlossen</p>
+                <p className="text-sm text-gray-600 mb-4">Zertifizierte Lift-Bedienung für Höhenarbeiten:</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/images/Scheren_Arbeitsbühne.svg`}
+                    alt="Scherenarbeitsbühne"
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                  <p className="text-gray-700">Scherenarbeitsbühne</p>
                 </div>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/images/Gelenkteleskop_Arbeitsbühne.svg`}
+                    alt="Gelenkteleskop-Arbeitsbühne"
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                  <p className="text-gray-700">Gelenkteleskop-Arbeitsbühne</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/images/Teleskop_Arbeitsbühne.svg`}
+                    alt="Teleskop-Arbeitsbühne"
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                  <p className="text-gray-700">Teleskop-Arbeitsbühne</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/images/Raupen_Arbeitsbühne.svg`}
+                    alt="Raupen-Arbeitsbühne"
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                  <p className="text-gray-700">Raupen-Arbeitsbühne</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}assets/images/Senkrechtlifte.svg`}
+                    alt="Senkrechtlift"
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                  <p className="text-gray-700">Senkrechtlift</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="https://www.liftkontor.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-primary transition-colors font-semibold text-sm flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                  </svg>
+                  liftkontor.com
+                </a>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl transform rotate-3"></div>
-                <div className="relative bg-white p-6 rounded-2xl shadow-lg">
-                  <a 
-                    href="https://www.liftkontor.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-primary transition-colors font-semibold text-sm flex items-center gap-2"
-                  >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                    </svg>
-                    liftkontor.com
-                  </a>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl transform rotate-2"></div>
+                <img 
+                  src={`${import.meta.env.BASE_URL}assets/images/lift_bild.jpg`}
+                  alt="Inhaber mit Lift-Zertifizierung - Professionelle Gebäudereinigung Südheide"
+                  className="relative w-auto h-96 lg:h-[500px] object-cover rounded-2xl shadow-xl"
+                  style={{ objectPosition: 'center 15%' }}
+                />
               </div>
             </div>
           </div>
@@ -131,51 +172,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Eigentümer Portrait */}
-        <div className="mb-16">
-          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-12 border border-gray-200">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                  Persönliche Verantwortung
-                </h3>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Als Inhaber stehe ich persönlich für Qualität und Zuverlässigkeit. 
-                  Mit über 10 Jahren Erfahrung in der Gebäudereinigung und zertifizierten 
-                  Qualifikationen für Höhenarbeiten sorge ich dafür, dass jedes Projekt 
-                  professionell und sicher ausgeführt wird.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-gray-700">Direkte Ansprechpartner vor Ort</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-gray-700">Persönliche Qualitätskontrolle</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-gray-700">Zertifizierte Fachkompetenz</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl transform rotate-2"></div>
-                  <img 
-                    src={`${import.meta.env.BASE_URL}assets/images/lift_bild.jpg`}
-                    alt="Inhaber mit Lift-Zertifizierung - Professionelle Gebäudereinigung Südheide"
-                    className="relative w-auto h-80 lg:h-96 object-cover rounded-2xl shadow-xl"
-                    style={{ objectPosition: 'center 15%' }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-accent via-cyan-400 to-accent text-white rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+<div className="bg-gradient-to-r from-accent via-cyan-400 to-accent text-white rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
           
@@ -189,7 +186,7 @@ export default function About() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-start gap-3">
-                <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <div>
