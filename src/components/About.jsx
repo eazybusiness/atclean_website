@@ -63,15 +63,15 @@ export default function About() {
         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12 mb-16 border border-gray-200">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div>
-              <div className="flex items-center gap-4 mb-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Zertifiziert durch Liftkontor
+              </h3>
+              <div className="mb-6">
                 <img 
                   src={`${import.meta.env.BASE_URL}assets/images/Liftkontor.png`}
                   alt="Liftkontor Logo"
                   className="h-12 object-contain"
                 />
-                <h3 className="text-3xl font-bold text-gray-900">
-                  Zertifiziert durch Liftkontor
-                </h3>
               </div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Unsere Mitarbeiter sind zertifiziert für den sicheren Umgang mit Hub-Lifts und Arbeitsbühnen. 
